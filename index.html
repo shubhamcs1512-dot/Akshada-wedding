@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मंगल परिणय | अक्षदा आणि कौस्तुभ</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Yatra+One&family=Cinzel+Decorative:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            800: '#520b17',
+                            900: '#38040d',
+                            950: '#230207',
+                        },
+                        gold: {
+                            300: '#f7e39a',
+                            400: '#e7c865',
+                            500: '#cca231',
+                            600: '#aa7e18',
+                        }
+                    },
+                    fontFamily: {
+                        yatra: ['"Yatra One"', 'cursive'],
+                        rozha: ['"Rozha One"', 'serif'],
+                        marathi: ['"Tiro Devanagari Marathi"', 'serif'],
+                        poppins: ['"Poppins"', 'sans-serif'],
+                        cinzel: ['"Cinzel Decorative"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #230207;
+            font-family: 'Tiro Devanagari Marathi', serif;
+            color: #fdf8e6;
+            overflow-x: hidden;
+        }
+
+        /* Royal Foil Gold Gradient Text */
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #FFF4CC 0%, #ECC558 45%, #B3861B 80%, #F5DE88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Golden Border Glow */
+        .gold-border {
+            border: 1px solid rgba(220, 175, 60, 0.45);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15), inset 0 0 12px rgba(212, 175, 55, 0.08);
+        }
+
+        .gold-double-border {
+            border: 3px double rgba(220, 175, 60, 0.6);
+        }
+
+        /* Falling Rose Petals Canvas */
+        #petalCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        /* Scratch Card Canvas */
+        .scratch-container {
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: none;
+        }
+
+        #scratchCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Subtle Rotating Dhamma Chakra */
+        @keyframes slowSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: slowSpin 40s linear infinite;
+        }
+
+        /* Pulse glow animation */
+        @keyframes goldPulse {
+            0%, 100% { filter: drop-shadow(0 0 6px rgba(245, 204, 82, 0.4)); }
+            50% { filter: drop-shadow(0 0 14px rgba(245, 204, 82, 0.8)); }
+        }
+        .gold-glow {
+            animation: goldPulse 3.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative selection:bg-gold-500 selection:text-burgundy-950">
+
+    <!-- Falling Petals Background Canvas -->
+    <canvas id="petalCanvas"></canvas>
+
+    <!-- Floating Audio & Quick Controls -->
+    <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+        <button id="musicToggleBtn" title="संगीत चालू / बंद" class="w-12 h-12 rounded-full bg-burgundy-900/90 text-gold-400 border border-gold-500/60 shadow-lg flex items-center justify-center backdrop-blur hover:scale-105 active:scale-95 transition-all duration-300">
+            <i id="musicIcon" class="fas fa-volume-xmark text-lg"></i>
+        </button>
+    </div>
+
+    <!-- Main Outer Container -->
+    <main class="max-w-2xl mx-auto px-4 py-8 md:py-14 relative z-10">
+
+        <!-- Luxury Invitation Card -->
+        <div class="relative bg-gradient-to-b from-burgundy-900/95 via-burgundy-950/95 to-[#1a0105]/98 rounded-3xl p-5 md:p-10 shadow-2xl gold-border backdrop-blur-md">
+            
+            <!-- Traditional Corner Ornaments (SVG) -->
+            <div class="absolute top-2 left-2 w-10 h-10 md:w-14 md:h-14 pointer-events-none opacity-80">
+                <svg viewBox="0 0 60 60" fill="none" class="w-full h-full text-gold-400">
+                    <path d="M4 56V12C4 7.58172 7.58172 4 12 4H56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M12 48V16C12 13.7909 13.7909 12 16 12H48" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+                    <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute top-2 right-2 w-10 h-10 md:w-14 md:h-14 pointer-events-none opacity-80 rotate-90">
+                <svg viewBox="0 0 60 60" fill="none" class="w-full h-full text-gold-400">
+                    <path d="M4 56V12C4 7.58172 7.58172 4 12 4H56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M12 48V16C12 13.7909 13.7909 12 16 12H48" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+                    <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-2 left-2 w-10 h-10 md:w-14 md:h-14 pointer-events-none opacity-80 -rotate-90">
+                <svg viewBox="0 0 60 60" fill="none" class="w-full h-full text-gold-400">
+                    <path d="M4 56V12C4 7.58172 7.58172 4 12 4H56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M12 48V16C12 13.7909 13.7909 12 16 12H48" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+                    <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-2 right-2 w-10 h-10 md:w-14 md:h-14 pointer-events-none opacity-80 rotate-180">
+                <svg viewBox="0 0 60 60" fill="none" class="w-full h-full text-gold-400">
+                    <path d="M4 56V12C4 7.58172 7.58172 4 12 4H56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M12 48V16C12 13.7909 13.7909 12 16 12H48" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+                    <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                </svg>
+            </div>
+
+            <!-- Buddhist Sacred Header & Mantras -->
+            <header class="text-center space-y-4 pt-2">
+                <div class="flex items-center justify-center gap-3 text-gold-400 text-xs sm:text-sm md:text-base tracking-widest font-semibold uppercase">
+                    <span>॥ नमो बुद्धाय ॥</span>
+                    <span class="text-amber-300">•</span>
+                    <span>॥ प्रज्ञा शील करुणा ॥</span>
+                    <span class="text-amber-300">•</span>
+                    <span>॥ जयभीम ॥</span>
+                </div>
+
+                <!-- Central Emblem: Mathematically Exact 24-Spoke Ashok Chakra (No Gaps) -->
+                <div class="relative py-2 flex justify-center items-center">
+                    <div class="w-24 h-24 md:w-28 md:h-28 relative flex items-center justify-center">
+                        <svg class="w-full h-full text-gold-400 animate-spin-slow drop-shadow-[0_0_14px_rgba(234,197,88,0.6)]" viewBox="-60 -60 120 120">
+                            <defs>
+                                <radialGradient id="chakraGold" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#fff6d1"/>
+                                    <stop offset="50%" stop-color="#ecc558"/>
+                                    <stop offset="100%" stop-color="#aa7e18"/>
+                                </radialGradient>
+                            </defs>
+                            <!-- Outer double rims -->
+                            <circle cx="0" cy="0" r="54" fill="none" stroke="url(#chakraGold)" stroke-width="2.5"/>
+                            <circle cx="0" cy="0" r="48" fill="none" stroke="url(#chakraGold)" stroke-width="1.8"/>
+                            <circle cx="0" cy="0" r="47" fill="none" stroke="rgba(245,222,136,0.4)" stroke-width="0.8"/>
+
+                            <!-- Center Hub with Inner Rings -->
+                            <circle cx="0" cy="0" r="13" fill="none" stroke="url(#chakraGold)" stroke-width="2"/>
+                            <circle cx="0" cy="0" r="10.5" fill="#38040d" stroke="url(#chakraGold)" stroke-width="1.2"/>
+                            <circle cx="0" cy="0" r="4" fill="url(#chakraGold)"/>
+
+                            <!-- Exactly 24 Spokes seamlessly joined from inner hub (r=12) to outer rim (r=48) -->
+                            <g id="chakraSpokes">
+                                <!-- Generated 24 spoke paths with classic Ashok Chakra tapered wedge profile -->
+                                <g stroke="url(#chakraGold)" stroke-width="1.6" stroke-linecap="round">
+                                    <!-- 0 deg -->
+                                    <line x1="0" y1="-12" x2="0" y2="-48" />
+                                    <!-- 15 deg -->
+                                    <line x1="3.11" y1="-11.59" x2="12.42" y2="-46.36" />
+                                    <!-- 30 deg -->
+                                    <line x1="6.00" y1="-10.39" x2="24.00" y2="-41.57" />
+                                    <!-- 45 deg -->
+                                    <line x1="8.49" y1="-8.49" x2="33.94" y2="-33.94" />
+                                    <!-- 60 deg -->
+                                    <line x1="10.39" y1="-6.00" x2="41.57" y2="-24.00" />
+                                    <!-- 75 deg -->
+                                    <line x1="11.59" y1="-3.11" x2="46.36" y2="-12.42" />
+                                    <!-- 90 deg -->
+                                    <line x1="12" y1="0" x2="48" y2="0" />
+                                    <!-- 105 deg -->
+                                    <line x1="11.59" y1="3.11" x2="46.36" y2="12.42" />
+                                    <!-- 120 deg -->
+                                    <line x1="10.39" y1="6.00" x2="41.57" y2="24.00" />
+                                    <!-- 135 deg -->
+                                    <line x1="8.49" y1="8.49" x2="33.94" y2="33.94" />
+                                    <!-- 150 deg -->
+                                    <line x1="6.00" y1="10.39" x2="24.00" y2="41.57" />
+                                    <!-- 165 deg -->
+                                    <line x1="3.11" y1="11.59" x2="12.42" y2="46.36" />
+                                    <!-- 180 deg -->
+                                    <line x1="0" y1="12" x2="0" y2="48" />
+                                    <!-- 195 deg -->
+                                    <line x1="-3.11" y1="11.59" x2="-12.42" y2="46.36" />
+                                    <!-- 210 deg -->
+                                    <line x1="-6.00" y1="10.39" x2="-24.00" y2="41.57" />
+                                    <!-- 225 deg -->
+                                    <line x1="-8.49" y1="8.49" x2="-33.94" y2="33.94" />
+                                    <!-- 240 deg -->
+                                    <line x1="-10.39" y1="6.00" x2="-41.57" y2="24.00" />
+                                    <!-- 255 deg -->
+                                    <line x1="-11.59" y1="3.11" x2="-46.36" y2="12.42" />
+                                    <!-- 270 deg -->
+                                    <line x1="-12" y1="0" x2="-48" y2="0" />
+                                    <!-- 285 deg -->
+                                    <line x1="-11.59" y1="-3.11" x2="-46.36" y2="-12.42" />
+                                    <!-- 300 deg -->
+                                    <line x1="-10.39" y1="-6.00" x2="-41.57" y2="-24.00" />
+                                    <!-- 315 deg -->
+                                    <line x1="-8.49" y1="-8.49" x2="-33.94" y2="-33.94" />
+                                    <!-- 330 deg -->
+                                    <line x1="-6.00" y1="-10.39" x2="-24.00" y2="-41.57" />
+                                    <!-- 345 deg -->
+                                    <line x1="-3.11" y1="-11.59" x2="-12.42" y2="-46.36" />
+                                </g>
+                                <!-- Outer Spoke Connection Beads/Nodes (24 points at r=48) -->
+                                <g fill="url(#chakraGold)">
+                                    <circle cx="0" cy="-48" r="1.6"/>
+                                    <circle cx="12.42" cy="-46.36" r="1.6"/>
+                                    <circle cx="24.00" cy="-41.57" r="1.6"/>
+                                    <circle cx="33.94" cy="-33.94" r="1.6"/>
+                                    <circle cx="41.57" cy="-24.00" r="1.6"/>
+                                    <circle cx="46.36" cy="-12.42" r="1.6"/>
+                                    <circle cx="48" cy="0" r="1.6"/>
+                                    <circle cx="46.36" cy="12.42" r="1.6"/>
+                                    <circle cx="41.57" cy="24.00" r="1.6"/>
+                                    <circle cx="33.94" cy="33.94" r="1.6"/>
+                                    <circle cx="24.00" cy="41.57" r="1.6"/>
+                                    <circle cx="12.42" cy="46.36" r="1.6"/>
+                                    <circle cx="0" cy="48" r="1.6"/>
+                                    <circle cx="-12.42" cy="46.36" r="1.6"/>
+                                    <circle cx="-24.00" cy="41.57" r="1.6"/>
+                                    <circle cx="-33.94" cy="33.94" r="1.6"/>
+                                    <circle cx="-41.57" cy="24.00" r="1.6"/>
+                                    <circle cx="-46.36" cy="12.42" r="1.6"/>
+                                    <circle cx="-48" cy="0" r="1.6"/>
+                                    <circle cx="-46.36" cy="-12.42" r="1.6"/>
+                                    <circle cx="-41.57" cy="-24.00" r="1.6"/>
+                                    <circle cx="-33.94" cy="-33.94" r="1.6"/>
+                                    <circle cx="-24.00" cy="-41.57" r="1.6"/>
+                                    <circle cx="-12.42" cy="-46.36" r="1.6"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <!-- Center Lotus Icon -->
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <i class="fas fa-spa text-gold-300 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-gold-300 text-base md:text-lg font-bold tracking-wider font-yatra">
+                    ॥ भवतु सब्ब मंगलम् ॥
+                </div>
+
+                <p class="text-xs sm:text-sm text-amber-200/90 leading-relaxed max-w-lg mx-auto font-medium px-2">
+                    विश्वकल्याणकारी तथागत भगवान गौतम बुद्ध आणि विश्वरत्न महामानव डॉ. बाबासाहेब आंबेडकर यांच्या पवित्र विचारांना अनुसरून
+                </p>
+
+                <!-- Elegant Floral Gold Divider -->
+                <div class="flex items-center justify-center gap-3 pt-2">
+                    <span class="h-[1px] w-12 sm:w-20 bg-gradient-to-r from-transparent to-gold-400"></span>
+                    <i class="fas fa-certificate text-gold-400 text-xs"></i>
+                    <i class="fas fa-spa text-gold-400 text-base"></i>
+                    <i class="fas fa-certificate text-gold-400 text-xs"></i>
+                    <span class="h-[1px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-gold-400"></span>
+                </div>
+            </header>
+
+            <!-- Ceremony Type Title -->
+            <div class="text-center my-6">
+                <span class="inline-block px-5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/40 text-gold-300 text-xs md:text-sm font-semibold tracking-wider">
+                    पवित्र बौद्ध विवाह सोहळा
+                </span>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-yatra gold-text-gradient mt-3 tracking-wide drop-shadow">
+                    साक्षगंध व मंगल परिणय
+                </h1>
+            </div>
+
+            <!-- Couple Section (Bride First as Requested) -->
+            <section class="space-y-6 my-8">
+
+                <!-- BRIDE CARD (FIRST) -->
+                <div class="relative bg-gradient-to-r from-burgundy-900/60 via-burgundy-800/40 to-burgundy-900/60 p-5 md:p-6 rounded-2xl gold-border text-center transform transition-transform hover:-translate-y-1 duration-300">
+                    <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gold-500/20 text-gold-400 mb-2">
+                        <i class="fas fa-gem text-sm"></i>
+                    </div>
+                    <div class="text-xs md:text-sm text-gold-400 uppercase tracking-widest font-semibold">
+                        दारिका (वधू)
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-rozha gold-text-gradient font-bold mt-1 mb-3">
+                        अक्षदा
+                    </h2>
+                    <p class="text-sm md:text-base text-amber-100/90 leading-relaxed font-normal">
+                        आयु. लक्ष्मण मोहन चव्हाण यांची नात<br>
+                        व आयु. चंद्रकांत लक्ष्मण चव्हाण यांची सुकन्या
+                    </p>
+                    <p class="text-xs md:text-sm text-gold-300/80 mt-1">
+                        (मु. पो. लांजेश्वर, ता. भूम, जि. धाराशीव)
+                    </p>
+                </div>
+
+                <!-- Romantic Knot / Joining Symbol -->
+                <div class="flex flex-col items-center justify-center py-1">
+                    <div class="flex items-center gap-3">
+                        <span class="w-12 h-px bg-gold-400/50"></span>
+                        <div class="w-10 h-10 rounded-full border border-gold-400/60 flex items-center justify-center bg-burgundy-950 text-gold-400 shadow-md">
+                            <i class="fas fa-heart text-amber-400"></i>
+                        </div>
+                        <span class="w-12 h-px bg-gold-400/50"></span>
+                    </div>
+                    <span class="text-sm md:text-base font-yatra text-gold-300 mt-2 tracking-wide">
+                        सूत जुळले... शुभ मंगल सावधान
+                    </span>
+                </div>
+
+                <!-- GROOM CARD -->
+                <div class="relative bg-gradient-to-r from-burgundy-900/60 via-burgundy-800/40 to-burgundy-900/60 p-5 md:p-6 rounded-2xl gold-border text-center transform transition-transform hover:-translate-y-1 duration-300">
+                    <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gold-500/20 text-gold-400 mb-2">
+                        <i class="fas fa-crown text-sm"></i>
+                    </div>
+                    <div class="text-xs md:text-sm text-gold-400 uppercase tracking-widest font-semibold">
+                        दारक (वर)
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-rozha gold-text-gradient font-bold mt-1 mb-3">
+                        कौस्तुभ
+                    </h2>
+                    <p class="text-sm md:text-base text-amber-100/90 leading-relaxed font-normal">
+                        शहीद सुभेदार धोंडिबा श्रावण लोंढे यांचा नातू<br>
+                        व आयु. दयानंद धोंडिबा लोंढे यांचा सुपुत्र
+                    </p>
+                    <p class="text-xs md:text-sm text-gold-300/80 mt-1">
+                        (मु. पो. हिंगणगाव, ता. कवठेमहांकाळ, जि. सांगली)
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Invitation Note -->
+            <div class="text-center p-4 bg-burgundy-950/70 rounded-2xl border border-gold-500/30 my-6">
+                <p class="text-sm md:text-base text-amber-100 font-medium leading-relaxed">
+                    शुक्रवार दि. २५/१२/२०२६ रोजी सकाळी ११.३० वा. संपन्न होणार आहे.<br>
+                    तरी आपण या मंगलसमयी सहकुटुंब, सहपरिवार, मित्रमंडळींसह उपस्थित राहून भावी नवदांपत्यास शुभ आशीर्वाद द्यावेत ही नम्र विनंती.
+                </p>
+            </div>
+
+            <!-- INTERACTIVE SCRATCH CARD TO REVEAL DATE -->
+            <section class="my-8">
+                <div class="text-center mb-3">
+                    <span class="text-xs md:text-sm font-semibold tracking-wider text-gold-400 uppercase flex items-center justify-center gap-2">
+                        <i class="fas fa-magic"></i> शुभ दिन उलगडा (Scratch to Reveal Date)
+                    </span>
+                    <p class="text-xs text-amber-200/70 mt-1">खालील सोनेरी कार्डवर बोटाने किंवा माऊसने स्क्रॅच करा</p>
+                </div>
+
+                <div class="scratch-container w-full max-w-md mx-auto h-36 md:h-40 rounded-2xl overflow-hidden shadow-2xl border-2 border-gold-400/80 bg-gradient-to-br from-burgundy-900 via-amber-950 to-burgundy-950 flex flex-col items-center justify-center p-4 text-center">
+                    <!-- Revealed Secret Layer -->
+                    <div class="space-y-1">
+                        <span class="text-xs font-semibold text-gold-400 uppercase tracking-widest">★ शुभ विवाह मुहूर्त ★</span>
+                        <h3 class="text-2xl sm:text-3xl md:text-4xl font-yatra text-white drop-shadow-md">
+                            शुक्रवार दि. २५/१२/२०२६
+                        </h3>
+                        <p class="text-sm font-medium text-amber-300">
+                            सकाळी ११:३० वाजता
+                        </p>
+                    </div>
+
+                    <!-- Canvas Scratch Surface -->
+                    <canvas id="scratchCanvas"></canvas>
+                </div>
+
+                <div id="scratchStatus" class="text-center text-xs text-gold-300 font-medium mt-2">
+                    कार्ड स्क्रॅच करा <i class="fas fa-hand-pointer animate-bounce ml-1"></i>
+                </div>
+            </section>
+
+            <!-- LIVE COUNTDOWN TIMER TO 25 DEC 2026 -->
+            <section class="my-8 p-4 md:p-6 rounded-2xl bg-burgundy-900/40 border border-gold-500/30 text-center">
+                <h4 class="text-xs md:text-sm font-semibold uppercase tracking-widest text-gold-400 mb-4">
+                    शुभ मुहूर्ताची घटिका (Countdown)
+                </h4>
+                <div class="grid grid-cols-4 gap-2 md:gap-4 max-w-sm mx-auto font-poppins">
+                    <div class="p-2 md:p-3 bg-burgundy-950/80 rounded-xl border border-gold-500/20">
+                        <span id="days" class="text-xl md:text-2xl font-bold text-amber-300 font-mono">00</span>
+                        <div class="text-[10px] md:text-xs text-amber-200/80 font-marathi">दिवस</div>
+                    </div>
+                    <div class="p-2 md:p-3 bg-burgundy-950/80 rounded-xl border border-gold-500/20">
+                        <span id="hours" class="text-xl md:text-2xl font-bold text-amber-300 font-mono">00</span>
+                        <div class="text-[10px] md:text-xs text-amber-200/80 font-marathi">तास</div>
+                    </div>
+                    <div class="p-2 md:p-3 bg-burgundy-950/80 rounded-xl border border-gold-500/20">
+                        <span id="minutes" class="text-xl md:text-2xl font-bold text-amber-300 font-mono">00</span>
+                        <div class="text-[10px] md:text-xs text-amber-200/80 font-marathi">मिनिटे</div>
+                    </div>
+                    <div class="p-2 md:p-3 bg-burgundy-950/80 rounded-xl border border-gold-500/20">
+                        <span id="seconds" class="text-xl md:text-2xl font-bold text-amber-300 font-mono">00</span>
+                        <div class="text-[10px] md:text-xs text-amber-200/80 font-marathi">सेकंद</div>
+                    </div>
+                </div>
+
+                <!-- Google Calendar Button -->
+                <div class="mt-4">
+                    <a id="addToCalendarBtn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E0%A4%85%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A6%E0%A4%BE+%E0%A4%B5+%E0%A4%95%E0%A5%8C%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%81%E0%A4%AD+%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B2+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%A3%E0%A4%AF&dates=20261225T060000Z/20261225T113000Z&details=%E0%A4%B8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%97%E0%A4%82%E0%A4%A7+%E0%A4%B5+%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B2+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%A3%E0%A4%AF+%E0%A4%B8%E0%A5%8B%E0%A4%B9%E0%A4%B3%E0%A4%BE&location=Gaodevi+Samaj+Mandir+Hall,+Juipada,+Sector+23,+Juinagar+West,+Navi+Mumbai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gold-500/20 hover:bg-gold-500/30 text-gold-300 border border-gold-500/50 text-xs md:text-sm font-semibold transition-all">
+                        <i class="far fa-calendar-plus"></i> कॅलेंडरमध्ये जोडा (Save the Date)
+                    </a>
+                </div>
+            </section>
+
+            <!-- EVENT SCHEDULE SECTION -->
+            <section class="my-10">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl md:text-2xl font-yatra gold-text-gradient font-bold">
+                        ॥ शुभ समारंभ कार्यक्रम ॥
+                    </h3>
+                    <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-2"></div>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Schedule Item 1 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-burgundy-950/70 border border-gold-500/30 hover:border-gold-500/60 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/30">
+                            <i class="fas fa-feather-pointed text-xl"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-base md:text-lg font-bold text-gold-300">सुगंधी उटणे</h5>
+                            <p class="text-xs md:text-sm text-amber-100 font-medium mt-0.5">
+                                बुधवार दि. २३/१२/२०२६ रोजी, सायं. ६:०० वा.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Schedule Item 2 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-burgundy-950/70 border border-gold-500/30 hover:border-gold-500/60 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/30">
+                            <i class="fas fa-ring text-xl"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-base md:text-lg font-bold text-gold-300">साक्षगंध</h5>
+                            <p class="text-xs md:text-sm text-amber-100 font-medium mt-0.5">
+                                शुक्रवार दि. २५/१२/२०२६ रोजी, सकाळी ११:३० वा.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Schedule Item 3 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-burgundy-900/60 border-2 border-gold-400/60 shadow-lg">
+                        <div class="w-12 h-12 rounded-xl bg-gold-400 text-burgundy-950 flex items-center justify-center shrink-0 shadow">
+                            <i class="fas fa-dharmachakra text-2xl animate-spin-slow"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h5 class="text-base md:text-lg font-bold text-amber-200">मंगल परिणय</h5>
+                                <span class="bg-amber-400/20 text-amber-300 text-[10px] px-2 py-0.5 rounded-full font-sans uppercase">मुख्य सोहळा</span>
+                            </div>
+                            <p class="text-xs md:text-sm text-white font-medium mt-0.5">
+                                शुक्रवार दि. २५/१२/२०२६ रोजी, दुपारी १२:३० वा.
+                            </p>
+                            <p class="text-xs text-gold-300/90 mt-1">
+                                <i class="fas fa-user-tie mr-1"></i> बौद्धाचार्य : आयु. भगीरथ शिंदे 
+                                <a href="tel:9967009064" class="underline ml-1">(मो.: ९९६७००९०६४)</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Schedule Item 4 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-burgundy-950/70 border border-gold-500/30 hover:border-gold-500/60 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/30">
+                            <i class="fas fa-utensils text-xl"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-base md:text-lg font-bold text-gold-300">स्वागत समारंभ व स्नेहभोजन</h5>
+                            <p class="text-xs md:text-sm text-amber-100 font-medium mt-0.5">
+                                दुपारी १:०० ते ४:०० वा.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VENUE (मंगल परिणय स्थळ) -->
+            <section class="my-10 p-5 md:p-6 rounded-2xl bg-gradient-to-b from-burgundy-900/50 to-burgundy-950/80 gold-border text-center">
+                <div class="w-14 h-14 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center mx-auto mb-3 border border-gold-400/40">
+                    <i class="fas fa-map-location-dot text-2xl"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-yatra gold-text-gradient font-bold mb-1">
+                    ॥ मंगल परिणय स्थळ ॥
+                </h3>
+                <h4 class="text-xl md:text-2xl font-bold text-white mt-1">
+                    गावदेवी समाज मंदिर हॉल
+                </h4>
+                <p class="text-sm md:text-base text-amber-100/90 mt-1 max-w-md mx-auto">
+                    जुईपाडा, सेक्टर २३, जुईनगर (प.), नवी मुंबई
+                </p>
+
+                <!-- Navigation Action Button -->
+                <div class="mt-5">
+                    <a href="https://maps.google.com/?cid=16101449550092031827" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-gold-500 to-amber-400 text-burgundy-950 font-bold text-sm shadow-lg hover:shadow-gold-500/20 hover:scale-105 active:scale-95 transition-all">
+                        <i class="fas fa-location-arrow"></i> Google Maps वर स्थळ पहा
+                    </a>
+                </div>
+            </section>
+
+            <!-- POETIC VERSE (आमंत्रण काव्यपंक्ती) -->
+            <section class="my-10 p-6 rounded-2xl bg-burgundy-950/90 border border-gold-500/30 text-center relative overflow-hidden">
+                <i class="fas fa-quote-left text-3xl text-gold-500/20 absolute top-3 left-4"></i>
+                <i class="fas fa-quote-right text-3xl text-gold-500/20 absolute bottom-3 right-4"></i>
+                <h4 class="text-xs md:text-sm font-semibold uppercase tracking-widest text-gold-400 mb-2">
+                    ॥ निमंत्रण काव्यपंक्ती ॥
+                </h4>
+                <blockquote class="italic text-sm md:text-base text-amber-200/95 leading-relaxed font-marathi">
+                    "आमंत्रण आहे विवाहाचे, इच्छा एकच मनाची,<br>
+                    प्रतीक्षा आपल्या आगमनाची, दारक-दारिकेच्या<br>
+                    मस्तकी अक्षता पडू द्या शुभ आशीर्वादांची,<br>
+                    हीच नम्र विनंती समस्त चव्हाण आणि लोंढे परिवारांची."
+                </blockquote>
+            </section>
+
+            <!-- INVITERS / SNEHANKIT -->
+            <section class="my-10 text-center space-y-4">
+                <h4 class="text-lg md:text-xl font-yatra gold-text-gradient font-bold">
+                    ॥ आपले स्नेही / निमंत्रक ॥
+                </h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto text-sm md:text-base">
+                    <div class="p-4 rounded-xl bg-burgundy-900/40 border border-gold-500/20">
+                        <p class="font-bold text-gold-300">आयु. चंद्रकांत लक्ष्मण चव्हाण</p>
+                        <p class="text-amber-100/90">आयु. सुनिता चंद्रकांत चव्हाण</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-burgundy-900/40 border border-gold-500/20">
+                        <p class="font-bold text-gold-300">आयु. दयानंद धोंडिबा लोंढे</p>
+                        <p class="text-amber-100/90">आयु. वर्षा दयानंद लोंढे</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gold-400 font-semibold tracking-wide pt-2">
+                    समस्त चव्हाण आणि लोंढे परिवार व आप्तेष्ट
+                </p>
+            </section>
+
+            <!-- BRIDE'S ADDRESS & DIRECT CONTACT (ONLY BRIDE SIDE - UPDATED ACCORDING TO REQUEST) -->
+            <section class="my-10 p-5 md:p-6 rounded-2xl bg-burgundy-950 border border-gold-500/40">
+                <div class="text-center space-y-2 mb-4">
+                    <span class="inline-block p-2 rounded-full bg-gold-500/10 text-gold-400 text-lg mb-1">
+                        <i class="fas fa-house-chimney"></i>
+                    </span>
+                    <h4 class="text-lg md:text-xl font-yatra gold-text-gradient font-bold">
+                        ॥ दारिकेचा पत्ता व थेट संपर्क ॥
+                    </h4>
+                    <p class="text-sm md:text-base text-amber-100 leading-relaxed max-w-md mx-auto">
+                        ई१/०६, बेस्ट स्टाफ क्वार्टर्स,<br>
+                        अनिल दत्तात्रय उभाळे मार्ग, घाटकोपर बेस्ट डेपो समोर,<br>
+                        घाटकोपर, मुंबई - ४०००७५
+                    </p>
+                </div>
+
+                <!-- Call Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-4">
+                    <a href="tel:8767721499" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-burgundy-900 hover:bg-burgundy-800 border border-gold-500/50 text-gold-300 font-semibold text-sm transition-all shadow">
+                        <i class="fas fa-phone-alt text-amber-400"></i> ८७६७७२१४९९
+                    </a>
+                    <a href="tel:8898837550" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-burgundy-900 hover:bg-burgundy-800 border border-gold-500/50 text-gold-300 font-semibold text-sm transition-all shadow">
+                        <i class="fas fa-phone-alt text-amber-400"></i> ८८९८८३७५५०
+                    </a>
+                </div>
+            </section>
+
+            <!-- SHARE VIA WHATSAPP BUTTON -->
+            <footer class="mt-8 pt-6 border-t border-gold-500/20 text-center space-y-4">
+                <button id="whatsappShareBtn" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg hover:shadow-emerald-500/30 hover:scale-105 active:scale-95 transition-all">
+                    <i class="fab fa-whatsapp text-lg"></i> व्हॉट्सॲपवर निमंत्रण पाठवा
+                </button>
+                <p class="text-xs text-amber-200/60">
+                    ॥ नमो बुद्धाय • जयभीम ॥
+                </p>
+            </footer>
+
+        </div>
+
+    </main>
+
+    <!-- Custom Notification Toast -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gold-400 text-burgundy-950 font-bold px-4 py-2 rounded-full shadow-2xl text-xs md:text-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none">
+        संदेश कॉपी झाला!
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        /* -------------------------------------------------------------
+           1. FALLING PETALS ANIMATION (Canvas)
+        ------------------------------------------------------------- */
+        const petalCanvas = document.getElementById('petalCanvas');
+        const pCtx = petalCanvas.getContext('2d');
+        let petals = [];
+
+        function resizePetalCanvas() {
+            petalCanvas.width = window.innerWidth;
+            petalCanvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizePetalCanvas);
+        resizePetalCanvas();
+
+        class Petal {
+            constructor() {
+                this.x = Math.random() * petalCanvas.width;
+                this.y = Math.random() * -petalCanvas.height;
+                this.size = Math.random() * 8 + 6;
+                this.speedX = Math.random() * 1.5 - 0.75;
+                this.speedY = Math.random() * 1.2 + 0.8;
+                this.rotation = Math.random() * 360;
+                this.rotationSpeed = Math.random() * 2 - 1;
+                // Soft pinks and gold shades
+                this.color = Math.random() > 0.4 ? 'rgba(235, 77, 95, 0.55)' : 'rgba(235, 180, 50, 0.45)';
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += Math.sin(this.y * 0.01) + this.speedX;
+                this.rotation += this.rotationSpeed;
+                if (this.y > petalCanvas.height + 20) {
+                    this.y = -20;
+                    this.x = Math.random() * petalCanvas.width;
+                }
+            }
+            draw() {
+                pCtx.save();
+                pCtx.translate(this.x, this.y);
+                pCtx.rotate((this.rotation * Math.PI) / 180);
+                pCtx.fillStyle = this.color;
+                pCtx.beginPath();
+                // Draw petal curve
+                pCtx.ellipse(0, 0, this.size, this.size / 2, 0, 0, Math.PI * 2);
+                pCtx.fill();
+                pCtx.restore();
+            }
+        }
+
+        for (let i = 0; i < 35; i++) {
+            petals.push(new Petal());
+        }
+
+        function animatePetals() {
+            pCtx.clearRect(0, 0, petalCanvas.width, petalCanvas.height);
+            petals.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animatePetals);
+        }
+        animatePetals();
+
+        /* -------------------------------------------------------------
+           2. SCRATCH-TO-REVEAL CANVAS CARD
+        ------------------------------------------------------------- */
+        const canvas = document.getElementById('scratchCanvas');
+        const ctx = canvas.getContext('2d');
+        const container = canvas.parentElement;
+        let isDrawing = false;
+        let scratchedPercent = 0;
+        let isRevealed = false;
+
+        function initScratchCard() {
+            const rect = container.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+
+            // Royal Golden Gradient Surface with pattern
+            const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            grad.addColorStop(0, '#f9e79f');
+            grad.addColorStop(0.3, '#d4ac0d');
+            grad.addColorStop(0.7, '#b7950b');
+            grad.addColorStop(1, '#f7dc6f');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Add subtle festive pattern on gold cover
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.25)';
+            for (let i = 0; i < canvas.width; i += 24) {
+                for (let j = 0; j < canvas.height; j += 24) {
+                    ctx.beginPath();
+                    ctx.arc(i + 12, j + 12, 1.5, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            // Scratch Instructions Text on the canvas
+            ctx.fillStyle = '#42060e';
+            ctx.font = 'bold 15px "Tiro Devanagari Marathi", serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('✨ येथे स्क्रॅच करा ✨', canvas.width / 2, canvas.height / 2 - 8);
+            ctx.font = '12px "Poppins", sans-serif';
+            ctx.fillText('(Scratch to reveal Wedding Date)', canvas.width / 2, canvas.height / 2 + 14);
+        }
+
+        function getMousePos(e) {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            return {
+                x: clientX - rect.left,
+                y: clientY - rect.top
+            };
+        }
+
+        function scratch(e) {
+            if (!isDrawing || isRevealed) return;
+            const pos = getMousePos(e);
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.beginPath();
+            ctx.arc(pos.x, pos.y, 22, 0, Math.PI * 2);
+            ctx.fill();
+            checkScratchProgress();
+        }
+
+        function checkScratchProgress() {
+            if (isRevealed) return;
+            const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            let transparentPixels = 0;
+            const totalPixels = imgData.data.length / 4;
+
+            // Check step size for performance
+            for (let i = 3; i < imgData.data.length; i += 16) {
+                if (imgData.data[i] === 0) {
+                    transparentPixels++;
+                }
+            }
+
+            const ratio = transparentPixels / (totalPixels / 4);
+            if (ratio > 0.40) {
+                isRevealed = true;
+                // Smoothly clear remaining canvas
+                canvas.style.transition = 'opacity 0.6s ease';
+                canvas.style.opacity = '0';
+                setTimeout(() => {
+                    canvas.style.display = 'none';
+                }, 600);
+
+                document.getElementById('scratchStatus').innerHTML = '🎉 शुभ मुहूर्त दर्शविला आहे! हार्दिक शुभेच्छा! 🎉';
+
+                // Confetti blast
+                if (typeof confetti === 'function') {
+                    confetti({
+                        particleCount: 80,
+                        spread: 70,
+                        origin: { y: 0.6 }
+                    });
+                }
+            }
+        }
+
+        canvas.addEventListener('mousedown', (e) => { isDrawing = true; scratch(e); });
+        canvas.addEventListener('mousemove', scratch);
+        window.addEventListener('mouseup', () => { isDrawing = false; });
+
+        canvas.addEventListener('touchstart', (e) => { isDrawing = true; scratch(e); }, { passive: true });
+        canvas.addEventListener('touchmove', scratch, { passive: true });
+        window.addEventListener('touchend', () => { isDrawing = false; });
+
+        window.addEventListener('load', initScratchCard);
+        window.addEventListener('resize', () => {
+            if (!isRevealed) initScratchCard();
+        });
+
+        /* -------------------------------------------------------------
+           3. WEDDING COUNTDOWN TIMER (Target: 25 Dec 2026, 11:30 AM)
+        ------------------------------------------------------------- */
+        const weddingDate = new Date('December 25, 2026 11:30:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById('days').innerText = "००";
+                document.getElementById('hours').innerText = "००";
+                document.getElementById('minutes').innerText = "००";
+                document.getElementById('seconds').innerText = "००";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        /* -------------------------------------------------------------
+           4. TRADITIONAL AMBIENT AUDIO (Web Audio API Synthesizer)
+        ------------------------------------------------------------- */
+        let isAudioPlaying = false;
+        let audioCtx = null;
+        let melodyInterval = null;
+
+        const musicToggleBtn = document.getElementById('musicToggleBtn');
+        const musicIcon = document.getElementById('musicIcon');
+
+        // Pentatonic peaceful Raag Bhupali / Mohanam notes (traditional wedding morning notes)
+        const notes = [
+            261.63, // C4 (Sa)
+            293.66, // D4 (Re)
+            329.63, // E4 (Ga)
+            392.00, // G4 (Pa)
+            440.00, // A4 (Dha)
+            523.25, // C5 (Taar Sa)
+            440.00,
+            392.00,
+            329.63,
+            293.66
+        ];
+
+        function playIndianFluteTone(freq, duration = 1.2) {
+            if (!audioCtx) return;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            // Flute-like gentle sine wave with subtle tremolo
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+            // Envelope (soft attack and gentle release)
+            gain.gain.setValueAtTime(0, audioCtx.currentTime);
+            gain.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 0.2);
+            gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        function startInstrumentalMelody() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            let index = 0;
+            melodyInterval = setInterval(() => {
+                playIndianFluteTone(notes[index % notes.length], 1.4);
+                index++;
+            }, 800);
+        }
+
+        function stopInstrumentalMelody() {
+            if (melodyInterval) {
+                clearInterval(melodyInterval);
+                melodyInterval = null;
+            }
+        }
+
+        musicToggleBtn.addEventListener('click', () => {
+            isAudioPlaying = !isAudioPlaying;
+            if (isAudioPlaying) {
+                startInstrumentalMelody();
+                musicIcon.classList.remove('fa-volume-xmark');
+                musicIcon.classList.add('fa-volume-high');
+                musicToggleBtn.classList.add('ring-2', 'ring-gold-400');
+                showToast("पारंपरिक संगीत सुरू झाले");
+            } else {
+                stopInstrumentalMelody();
+                musicIcon.classList.remove('fa-volume-high');
+                musicIcon.classList.add('fa-volume-xmark');
+                musicToggleBtn.classList.remove('ring-2', 'ring-gold-400');
+                showToast("संगीत बंद केले");
+            }
+        });
+
+        /* -------------------------------------------------------------
+           5. WHATSAPP INVITATION SHARE
+        ------------------------------------------------------------- */
+        const whatsappShareBtn = document.getElementById('whatsappShareBtn');
+        whatsappShareBtn.addEventListener('click', () => {
+            const shareText = `॥ नमो बुद्धाय ॥\n\n*मंगल परिणय निमंत्रण*\n\nप्रिय सस्नेह जयभीम,\nआमची कन्या *चि. सौ. का. अक्षदा* आणि *चि. कौस्तुभ* यांचा साक्षगंध व मंगल परिणय सोहळा शुक्रवार दि. २५/१२/२०२६ रोजी संपन्न होणार आहे.\n\n📍 *स्थळ:* गावदेवी समाज मंदिर हॉल, जुईपाडा, सेक्टर २३, जुईनगर (प.), नवी मुंबई.\n\nआपण सहकुटुंब उपस्थित राहून नवदाम्पत्यास शुभाशीर्वाद द्यावेत ही नम्र विनंती!\n\nसंपूर्ण निमंत्रण पत्रिका येथे पहा:\n${window.location.href}`;
+            
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+
+        /* Toast Helper */
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+            }, 2400);
+        }
+    </script>
+</body>
+</html>
