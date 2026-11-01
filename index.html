@@ -1,423 +1,1424 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>अक्षदा आणि कौस्तुभ | शुभविवाह निमंत्रण (Zareqia Royal Grace)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>अक्षदा आणि कौस्तुभ | शुभविवाह निमंत्रण (Zareqia Royal Grace)</title>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Rozha One, Cormorant Garamond, Great Vibes, Playfair Display, Tiro Devanagari Marathi -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Rozha One, Cormorant Garamond, Great Vibes, Playfair Display, Tiro Devanagari Marathi -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Canvas Confetti -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            sage: {
-              50: '#f4f6f3',
-              100: '#e5eae3',
-              200: '#cdd7c9',
-              300: '#a7bba1',
-              400: '#7e9a75',
-              600: '#4e5d48', // Reference Zareqia Olive-Sage
-              700: '#3e4b39',
-              800: '#333e2f',
-              900: '#232a20'
-            },
-            linen: {
-              50: '#faf8f5',
-              100: '#f5f1ea',
-              200: '#eee8dc',
-              300: '#e3d9c7'
-            },
-            gold: {
-              300: '#ecd087',
-              400: '#dfba65',
-              500: '#c5a059',
-              600: '#a68241',
-              700: '#87652e'
-            }
-          },
-          fontFamily: {
-            script: ['"Great Vibes"', 'cursive'],
-            cormorant: ['"Cormorant Garamond"', 'serif'],
-            playfair: ['"Playfair Display"', 'serif'],
-            rozha: ['"Rozha One"', 'serif'],
-            marathi: ['"Tiro Devanagari Marathi"', 'serif'],
-            sans: ['"Montserrat"', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#f4f6f3',
+              100: '#e5eae3',
+              200: '#cdd7c9',
+              300: '#a7bba1',
+              400: '#7e9a75',
+              600: '#4e5d48', // Reference Zareqia Olive-Sage
+              700: '#3e4b39',
+              800: '#333e2f',
+              900: '#232a20'
+            },
+            linen: {
+              50: '#faf8f5',
+              100: '#f5f1ea',
+              200: '#eee8dc',
+              300: '#e3d9c7'
+            },
+            gold: {
+              300: '#ecd087',
+              400: '#dfba65',
+              500: '#c5a059',
+              600: '#a68241',
+              700: '#87652e'
+            }
+          },
+          fontFamily: {
+            script: ['"Great Vibes"', 'cursive'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            playfair: ['"Playfair Display"', 'serif'],
+            rozha: ['"Rozha One"', 'serif'],
+            marathi: ['"Tiro Devanagari Marathi"', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
 
-  <style>
-    /* Authentic Canvas / Linen Paper Texture */
-    .linen-texture {
-      background-color: #f7f3eb;
-      background-image: 
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.7) 0%, transparent 80%),
-        repeating-linear-gradient(0deg, rgba(160, 140, 110, 0.035) 0px, rgba(160, 140, 110, 0.035) 1px, transparent 1px, transparent 4px),
-        repeating-linear-gradient(90deg, rgba(160, 140, 110, 0.035) 0px, rgba(160, 140, 110, 0.035) 1px, transparent 1px, transparent 4px);
-    }
+  <style>
+    /* Authentic Canvas / Linen Paper Texture */
+    .linen-texture {
+      background-color: #f7f3eb;
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.7) 0%, transparent 80%),
+        repeating-linear-gradient(0deg, rgba(160, 140, 110, 0.035) 0px, rgba(160, 140, 110, 0.035) 1px, transparent 1px, transparent 4px),
+        repeating-linear-gradient(90deg, rgba(160, 140, 110, 0.035) 0px, rgba(160, 140, 110, 0.035) 1px, transparent 1px, transparent 4px);
+    }
 
-    /* Traditional Paithani Zari Woven Border Motif */
-    .paithani-zari-frame {
-      position: absolute;
-      inset: 8px;
-      pointer-events: none;
-      z-index: 25;
-      border: 3.5px solid #c5a059;
-      box-shadow: 
-        inset 0 0 0 3px #6e1c24,
-        inset 0 0 0 5.5px #ecd087,
-        0 0 10px rgba(197, 160, 89, 0.35);
-      border-radius: 20px;
-    }
-    .paithani-corner-peacock {
-      position: absolute;
-      width: 44px;
-      height: 44px;
-      pointer-events: none;
-      z-index: 26;
-      filter: drop-shadow(0 2px 4px rgba(110, 28, 36, 0.4));
-    }
+    /* Traditional Paithani Zari Woven Border Motif */
+    .paithani-zari-frame {
+      position: absolute;
+      inset: 8px;
+      pointer-events: none;
+      z-index: 25;
+      border: 3.5px solid #c5a059;
+      box-shadow: 
+        inset 0 0 0 3px #6e1c24,
+        inset 0 0 0 5.5px #ecd087,
+        0 0 10px rgba(197, 160, 89, 0.35);
+      border-radius: 20px;
+    }
+    .paithani-corner-peacock {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      pointer-events: none;
+      z-index: 26;
+      filter: drop-shadow(0 2px 4px rgba(110, 28, 36, 0.4));
+    }
 
-    /* Enhanced Royal Designer Sage Damask Doors with Wood Beveling */
-    .sage-damask-texture {
-      background-color: #3f4e39;
-      background-image: 
-        radial-gradient(ellipse at 50% 50%, rgba(138, 163, 129, 0.42) 0%, rgba(30, 39, 27, 0.95) 100%),
-        radial-gradient(circle at 30px 30px, rgba(255, 255, 255, 0.08) 3%, transparent 22%),
-        radial-gradient(circle at 80px 80px, rgba(212, 175, 55, 0.07) 4%, transparent 25%),
-        repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px, transparent 2px, transparent 6px);
-      box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.6);
-    }
+    /* Enhanced Royal Designer Sage Damask Doors with Wood Beveling */
+    .sage-damask-texture {
+      background-color: #3f4e39;
+      background-image: 
+        radial-gradient(ellipse at 50% 50%, rgba(138, 163, 129, 0.42) 0%, rgba(30, 39, 27, 0.95) 100%),
+        radial-gradient(circle at 30px 30px, rgba(255, 255, 255, 0.08) 3%, transparent 22%),
+        radial-gradient(circle at 80px 80px, rgba(212, 175, 55, 0.07) 4%, transparent 25%),
+        repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px, transparent 2px, transparent 6px);
+      box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.6);
+    }
 
-    /* Architectural Beveled Panel Insets on Doors */
-    .door-molding-panel {
-      box-shadow: 
-        inset 2px 2px 8px rgba(255, 255, 255, 0.15),
-        inset -3px -3px 12px rgba(0, 0, 0, 0.6),
-        0 4px 15px rgba(0, 0, 0, 0.4);
-    }
+    /* Architectural Beveled Panel Insets on Doors */
+    .door-molding-panel {
+      box-shadow: 
+        inset 2px 2px 8px rgba(255, 255, 255, 0.15),
+        inset -3px -3px 12px rgba(0, 0, 0, 0.6),
+        0 4px 15px rgba(0, 0, 0, 0.4);
+    }
 
-    /* 3D Gatefold Transition */
-    .perspective-container {
-      perspective: 1600px;
-    }
-    .gate-door-left {
-      transform-origin: left center;
-      transition: transform 1.7s cubic-bezier(0.77, 0, 0.175, 1);
-    }
-    .gate-door-right {
-      transform-origin: right center;
-      transition: transform 1.7s cubic-bezier(0.77, 0, 0.175, 1);
-    }
-    .doors-open .gate-door-left {
-      transform: rotateY(-118deg);
-    }
-    .doors-open .gate-door-right {
-      transform: rotateY(118deg);
-    }
+    /* 3D Gatefold Transition */
+    .perspective-container {
+      perspective: 1600px;
+    }
+    .gate-door-left {
+      transform-origin: left center;
+      transition: transform 1.7s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    .gate-door-right {
+      transform-origin: right center;
+      transition: transform 1.7s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    .doors-open .gate-door-left {
+      transform: rotateY(-118deg);
+    }
+    .doors-open .gate-door-right {
+      transform: rotateY(118deg);
+    }
 
-    /* Elegant Draped Curtains */
-    .curtain-left {
-      transform-origin: top left;
-      transition: transform 1.8s cubic-bezier(0.65, 0, 0.35, 1);
-    }
-    .curtain-right {
-      transform-origin: top right;
-      transition: transform 1.8s cubic-bezier(0.65, 0, 0.35, 1);
-    }
-    .curtains-open .curtain-left {
-      transform: translateX(-105%) scaleX(0.7);
-    }
-    .curtains-open .curtain-right {
-      transform: translateX(105%) scaleX(0.7);
-    }
+    /* Elegant Draped Curtains */
+    .curtain-left {
+      transform-origin: top left;
+      transition: transform 1.8s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    .curtain-right {
+      transform-origin: top right;
+      transition: transform 1.8s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    .curtains-open .curtain-left {
+      transform: translateX(-105%) scaleX(0.7);
+    }
+    .curtains-open .curtain-right {
+      transform: translateX(105%) scaleX(0.7);
+    }
 
-    /* Ultra-Designer Royal Cartouche / Plaque */
-    .royal-cartouche {
-      background: radial-gradient(ellipse at 50% 35%, #fffef8 0%, #fbf6ea 45%, #eddcc0 100%);
-      box-shadow: 
-        0 22px 45px -8px rgba(17, 24, 15, 0.75),
-        0 8px 16px rgba(0, 0, 0, 0.3),
-        inset 0 0 16px rgba(197, 160, 89, 0.5),
-        0 0 0 3.5px #c5a059,
-        0 0 0 6.5px rgba(255, 248, 230, 0.7),
-        0 0 0 8.5px #9f7d38;
-    }
+    /* Ultra-Designer Royal Cartouche / Plaque */
+    .royal-cartouche {
+      background: radial-gradient(ellipse at 50% 35%, #fffef8 0%, #fbf6ea 45%, #eddcc0 100%);
+      box-shadow: 
+        0 22px 45px -8px rgba(17, 24, 15, 0.75),
+        0 8px 16px rgba(0, 0, 0, 0.3),
+        inset 0 0 16px rgba(197, 160, 89, 0.5),
+        0 0 0 3.5px #c5a059,
+        0 0 0 6.5px rgba(255, 248, 230, 0.7),
+        0 0 0 8.5px #9f7d38;
+    }
 
-    /* Breathing Golden Halo on Badge */
-    @keyframes royalHalo {
-      0%, 100% {
-        box-shadow: 0 0 20px 2px rgba(212, 175, 55, 0.3), 0 18px 38px rgba(0,0,0,0.6);
-        transform: translateY(0) scale(1);
-      }
-      50% {
-        box-shadow: 0 0 32px 8px rgba(212, 175, 55, 0.65), 0 24px 44px rgba(0,0,0,0.55);
-        transform: translateY(-4px) scale(1.015);
-      }
-    }
-    .halo-animated {
-      animation: royalHalo 3.5s ease-in-out infinite;
-    }
+    /* Breathing Golden Halo on Badge */
+    @keyframes royalHalo {
+      0%, 100% {
+        box-shadow: 0 0 20px 2px rgba(212, 175, 55, 0.3), 0 18px 38px rgba(0,0,0,0.6);
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        box-shadow: 0 0 32px 8px rgba(212, 175, 55, 0.65), 0 24px 44px rgba(0,0,0,0.55);
+        transform: translateY(-4px) scale(1.015);
+      }
+    }
+    .halo-animated {
+      animation: royalHalo 3.5s ease-in-out infinite;
+    }
 
-    /* Scratch Canvas Smooth Dissolve Transition */
-    #scratchCanvas {
-      cursor: crosshair;
-      touch-action: none;
-      transition: opacity 1.1s cubic-bezier(0.4, 0, 0.2, 1), transform 1.1s cubic-bezier(0.4, 0, 0.2, 1), filter 1.1s ease;
-    }
-    .canvas-dissolving {
-      opacity: 0 !important;
-      transform: scale(1.08);
-      filter: blur(8px) brightness(1.2);
-      pointer-events: none;
-    }
+    /* Scratch Canvas Smooth Dissolve Transition */
+    #scratchCanvas {
+      cursor: crosshair;
+      touch-action: none;
+      transition: opacity 1.1s cubic-bezier(0.4, 0, 0.2, 1), transform 1.1s cubic-bezier(0.4, 0, 0.2, 1), filter 1.1s ease;
+    }
+    .canvas-dissolving {
+      opacity: 0 !important;
+      transform: scale(1.08);
+      filter: blur(8px) brightness(1.2);
+      pointer-events: none;
+    }
 
-    /* Parallax Floating Flower Petals (Mogra & Champa) */
-    .petal-layer {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 28;
-      overflow: hidden;
-    }
-    .drifting-petal {
-      position: absolute;
-      will-change: transform, opacity;
-      animation: floatPetalDown linear infinite;
-    }
-    @keyframes floatPetalDown {
-      0% {
-        transform: translateY(-40px) translateX(0) rotate(0deg) scale(0.9);
-        opacity: 0;
-      }
-      15% {
-        opacity: 0.85;
-      }
-      85% {
-        opacity: 0.85;
-      }
-      100% {
-        transform: translateY(105vh) translateX(45px) rotate(360deg) scale(1.05);
-        opacity: 0;
-      }
-    }
+    /* Parallax Floating Flower Petals (Mogra & Champa) */
+    .petal-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 28;
+      overflow: hidden;
+    }
+    .drifting-petal {
+      position: absolute;
+      will-change: transform, opacity;
+      animation: floatPetalDown linear infinite;
+    }
+    @keyframes floatPetalDown {
+      0% {
+        transform: translateY(-40px) translateX(0) rotate(0deg) scale(0.9);
+        opacity: 0;
+      }
+      15% {
+        opacity: 0.85;
+      }
+      85% {
+        opacity: 0.85;
+      }
+      100% {
+        transform: translateY(105vh) translateX(45px) rotate(360deg) scale(1.05);
+        opacity: 0;
+      }
+    }
 
-    /* Smooth Scroll Behavior */
-    html, body, #invitationScrollBody {
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
+    /* Smooth Scroll Behavior */
+    html, body, #invitationScrollBody {
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
 
-    /* Climbing Floral Vine Margins */
-    .vine-border-left, .vine-border-right {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 48px;
-      pointer-events: none;
-      z-index: 15;
-      background-repeat: repeat-y;
-      background-size: 44px auto;
-    }
-    .vine-border-left {
-      left: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 200' width='60' height='200'%3E%3Cpath d='M30 0 Q38 40 28 80 T34 160 T30 200' fill='none' stroke='%234e5d48' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M32 25 Q45 20 50 12 Q45 28 32 30' fill='%23677e5e'/%3E%3Cpath d='M28 55 Q15 50 8 42 Q15 60 28 60' fill='%23677e5e'/%3E%3Cpath d='M33 90 Q48 88 52 78 Q46 95 33 96' fill='%23677e5e'/%3E%3Cpath d='M29 130 Q14 125 7 115 Q15 135 29 136' fill='%23677e5e'/%3E%3Cpath d='M32 170 Q48 168 53 158 Q46 176 32 177' fill='%23677e5e'/%3E%3Ccircle cx='30' cy='38' r='7' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='28' cy='105' r='8' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='31' cy='182' r='7.5' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='30' cy='38' r='3' fill='%23e59f8a'/%3E%3Ccircle cx='28' cy='105' r='3.5' fill='%23e59f8a'/%3E%3Ccircle cx='31' cy='182' r='3' fill='%23e59f8a'/%3E%3C/svg%3E");
-    }
-    .vine-border-right {
-      right: 0;
-      transform: scaleX(-1);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 200' width='60' height='200'%3E%3Cpath d='M30 0 Q38 40 28 80 T34 160 T30 200' fill='none' stroke='%234e5d48' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M32 25 Q45 20 50 12 Q45 28 32 30' fill='%23677e5e'/%3E%3Cpath d='M28 55 Q15 50 8 42 Q15 60 28 60' fill='%23677e5e'/%3E%3Cpath d='M33 90 Q48 88 52 78 Q46 95 33 96' fill='%23677e5e'/%3E%3Cpath d='M29 130 Q14 125 7 115 Q15 135 29 136' fill='%23677e5e'/%3E%3Cpath d='M32 170 Q48 168 53 158 Q46 176 32 177' fill='%23677e5e'/%3E%3Ccircle cx='30' cy='38' r='7' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='28' cy='105' r='8' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='31' cy='182' r='7.5' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='30' cy='38' r='3' fill='%23e59f8a'/%3E%3Ccircle cx='28' cy='105' r='3.5' fill='%23e59f8a'/%3E%3Ccircle cx='31' cy='182' r='3' fill='%23e59f8a'/%3E%3C/svg%3E");
-    }
+    /* Climbing Floral Vine Margins */
+    .vine-border-left, .vine-border-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 48px;
+      pointer-events: none;
+      z-index: 15;
+      background-repeat: repeat-y;
+      background-size: 44px auto;
+    }
+    .vine-border-left {
+      left: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 200' width='60' height='200'%3E%3Cpath d='M30 0 Q38 40 28 80 T34 160 T30 200' fill='none' stroke='%234e5d48' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M32 25 Q45 20 50 12 Q45 28 32 30' fill='%23677e5e'/%3E%3Cpath d='M28 55 Q15 50 8 42 Q15 60 28 60' fill='%23677e5e'/%3E%3Cpath d='M33 90 Q48 88 52 78 Q46 95 33 96' fill='%23677e5e'/%3E%3Cpath d='M29 130 Q14 125 7 115 Q15 135 29 136' fill='%23677e5e'/%3E%3Cpath d='M32 170 Q48 168 53 158 Q46 176 32 177' fill='%23677e5e'/%3E%3Ccircle cx='30' cy='38' r='7' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='28' cy='105' r='8' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='31' cy='182' r='7.5' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='30' cy='38' r='3' fill='%23e59f8a'/%3E%3Ccircle cx='28' cy='105' r='3.5' fill='%23e59f8a'/%3E%3Ccircle cx='31' cy='182' r='3' fill='%23e59f8a'/%3E%3C/svg%3E");
+    }
+    .vine-border-right {
+      right: 0;
+      transform: scaleX(-1);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 200' width='60' height='200'%3E%3Cpath d='M30 0 Q38 40 28 80 T34 160 T30 200' fill='none' stroke='%234e5d48' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M32 25 Q45 20 50 12 Q45 28 32 30' fill='%23677e5e'/%3E%3Cpath d='M28 55 Q15 50 8 42 Q15 60 28 60' fill='%23677e5e'/%3E%3Cpath d='M33 90 Q48 88 52 78 Q46 95 33 96' fill='%23677e5e'/%3E%3Cpath d='M29 130 Q14 125 7 115 Q15 135 29 136' fill='%23677e5e'/%3E%3Cpath d='M32 170 Q48 168 53 158 Q46 176 32 177' fill='%23677e5e'/%3E%3Ccircle cx='30' cy='38' r='7' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='28' cy='105' r='8' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='31' cy='182' r='7.5' fill='%23eec7b9' stroke='%23d9a998' stroke-width='1'/%3E%3Ccircle cx='30' cy='38' r='3' fill='%23e59f8a'/%3E%3Ccircle cx='28' cy='105' r='3.5' fill='%23e59f8a'/%3E%3Ccircle cx='31' cy='182' r='3' fill='%23e59f8a'/%3E%3C/svg%3E");
+    }
 
-    /* Scratch Card Canvas */
-    #scratchCanvas {
-      cursor: crosshair;
-      touch-action: none;
-    }
+    /* Scratch Card Canvas */
+    #scratchCanvas {
+      cursor: crosshair;
+      touch-action: none;
+    }
 
-    /* Hide scrollbars for clean presentation */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-  </style>
+    /* Hide scrollbars for clean presentation */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
 </head>
 <body class="bg-[#1b2219] text-[#343e30] font-cormorant antialiased selection:bg-sage-600 selection:text-white flex justify-center items-center min-h-screen p-0 sm:p-4">
 
-  <!-- ========================================================================= -->
-  <!-- MOBILE CONTAINER SHELL (Exact Phone Ratio like Zareqia Demo)              -->
-  <!-- ========================================================================= -->
-  <div class="relative w-full max-w-[440px] h-[100dvh] sm:h-[890px] sm:max-h-[92vh] sm:rounded-[36px] overflow-hidden shadow-2xl border-0 sm:border-8 border-[#2e372a] bg-[#f7f3eb] flex flex-col">
+  <!-- ========================================================================= -->
+  <!-- MOBILE CONTAINER SHELL (Exact Phone Ratio like Zareqia Demo)              -->
+  <!-- ========================================================================= -->
+  <div class="relative w-full max-w-[440px] h-[100dvh] sm:h-[890px] sm:max-h-[92vh] sm:rounded-[36px] overflow-hidden shadow-2xl border-0 sm:border-8 border-[#2e372a] bg-[#f7f3eb] flex flex-col">
 
-    <!-- Floating Top Bar (Speaker + Music / Controls) -->
-    <header class="absolute top-4 left-0 right-0 z-40 px-5 flex items-center justify-between pointer-events-none">
-      <div class="pointer-events-auto flex items-center gap-2">
-        <!-- Brand Indicator -->
-        <span class="px-2.5 py-1 rounded-full bg-white/70 backdrop-blur-md text-[11px] font-sans font-medium text-sage-800 shadow-sm border border-stone-200">
-          ॥ सप्रेम निमंत्रण ॥
-        </span>
-      </div>
+    <!-- Floating Top Bar (Speaker + Music / Controls) -->
+    <header class="absolute top-4 left-0 right-0 z-40 px-5 flex items-center justify-between pointer-events-none">
+      <div class="pointer-events-auto flex items-center gap-2">
+        <!-- Brand Indicator -->
+        <span class="px-2.5 py-1 rounded-full bg-white/70 backdrop-blur-md text-[11px] font-sans font-medium text-sage-800 shadow-sm border border-stone-200">
+          ॥ सप्रेम निमंत्रण ॥
+        </span>
+      </div>
 
-      <div class="pointer-events-auto flex items-center gap-2">
-        <!-- Auspicious Shehnai / Music Player Toggle -->
-        <button id="audioToggleBtn" class="w-10 h-10 rounded-full bg-sage-700/85 text-stone-100 flex items-center justify-center shadow-lg backdrop-blur-md hover:bg-sage-800 transition active:scale-95" title="पारंपरिक संगीत (Music)">
-          <i id="audioIcon" class="fa-solid fa-volume-high text-xs"></i>
-        </button>
+      <div class="pointer-events-auto flex items-center gap-2">
+        <!-- Auspicious Shehnai / Music Player Toggle -->
+        <button id="audioToggleBtn" class="w-10 h-10 rounded-full bg-sage-700/85 text-stone-100 flex items-center justify-center shadow-lg backdrop-blur-md hover:bg-sage-800 transition active:scale-95" title="पारंपरिक संगीत (Music)">
+          <i id="audioIcon" class="fa-solid fa-volume-high text-xs"></i>
+        </button>
 
-        <!-- Flower Shower Button -->
-        <button id="blessingPetalBtn" class="w-10 h-10 rounded-full bg-sage-700/85 text-stone-100 flex items-center justify-center shadow-lg backdrop-blur-md hover:bg-sage-800 transition active:scale-95" title="पुष्पवृष्टी">
-          <span class="text-xs">🌸</span>
-        </button>
-      </div>
-    </header>
+        <!-- Flower Shower Button -->
+        <button id="blessingPetalBtn" class="w-10 h-10 rounded-full bg-sage-700/85 text-stone-100 flex items-center justify-center shadow-lg backdrop-blur-md hover:bg-sage-800 transition active:scale-95" title="पुष्पवृष्टी">
+          <span class="text-xs">🌸</span>
+        </button>
+      </div>
+    </header>
 
-    <!-- ======================================================================= -->
-    <!-- 1. ENVELOPE & GATEFOLD SCREEN (Screenshots 1 & 2 / Video 00:00 - 00:04) -->
-    <!-- ======================================================================= -->
-    <div id="gatefoldOverlay" class="absolute inset-0 z-50 perspective-container overflow-hidden flex transition-opacity duration-700">
-      
-      <!-- Left Gate Door (Ultra Designer Moldings & Brackets) -->
-      <div id="leftDoor" class="gate-door-left absolute top-0 left-0 w-1/2 h-full sage-damask-texture border-r-2 border-[#b59247] flex flex-col justify-between p-3.5 z-20 shadow-2xl relative">
-        
-        <!-- Architectural Inset Molding Frame -->
-        <div class="door-molding-panel absolute inset-3 rounded-l-2xl border-2 border-[#b59247]/50 pointer-events-none flex flex-col justify-between p-3">
-          
-          <!-- Ornate Brass Top-Left Corner Bracket -->
-          <svg class="w-10 h-10 text-gold-400 opacity-80 -mt-1 -ml-1" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M2 38 L2 2 L38 2 M8 2 C8 18 18 28 35 28 M2 8 C18 8 28 18 28 35"/>
-            <circle cx="6" cy="6" r="2.5" fill="#dfba65"/>
-          </svg>
+    <!-- ======================================================================= -->
+    <!-- 1. ENVELOPE & GATEFOLD SCREEN (Screenshots 1 & 2 / Video 00:00 - 00:04) -->
+    <!-- ======================================================================= -->
+    <div id="gatefoldOverlay" class="absolute inset-0 z-50 perspective-container overflow-hidden flex transition-opacity duration-700">
+      
+      <!-- Left Gate Door (Ultra Designer Moldings & Brackets) -->
+      <div id="leftDoor" class="gate-door-left absolute top-0 left-0 w-1/2 h-full sage-damask-texture border-r-2 border-[#b59247] flex flex-col justify-between p-3.5 z-20 shadow-2xl relative">
+        
+        <!-- Architectural Inset Molding Frame -->
+        <div class="door-molding-panel absolute inset-3 rounded-l-2xl border-2 border-[#b59247]/50 pointer-events-none flex flex-col justify-between p-3">
+          
+          <!-- Ornate Brass Top-Left Corner Bracket -->
+          <svg class="w-10 h-10 text-gold-400 opacity-80 -mt-1 -ml-1" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M2 38 L2 2 L38 2 M8 2 C8 18 18 28 35 28 M2 8 C18 8 28 18 28 35"/>
+            <circle cx="6" cy="6" r="2.5" fill="#dfba65"/>
+          </svg>
 
-          <!-- Central Filigree Emblem Motif Watermark -->
-          <div class="my-auto mx-auto opacity-20 text-gold-300">
-            <svg class="w-20 h-28" viewBox="0 0 100 140" fill="currentColor">
-              <path d="M50 0 C65 25 95 30 95 55 C95 85 50 125 50 140 C50 125 5 85 5 55 C5 30 35 25 50 0 Z"/>
-              <circle cx="50" cy="55" r="14" fill="none" stroke="#fff" stroke-width="3"/>
-            </svg>
-          </div>
+          <!-- Central Filigree Emblem Motif Watermark -->
+          <div class="my-auto mx-auto opacity-20 text-gold-300">
+            <svg class="w-20 h-28" viewBox="0 0 100 140" fill="currentColor">
+              <path d="M50 0 C65 25 95 30 95 55 C95 85 50 125 50 140 C50 125 5 85 5 55 C5 30 35 25 50 0 Z"/>
+              <circle cx="50" cy="55" r="14" fill="none" stroke="#fff" stroke-width="3"/>
+            </svg>
+          </div>
 
-          <!-- Ornate Brass Bottom-Left Corner Bracket -->
-          <svg class="w-10 h-10 text-gold-400 opacity-80 -mb-1 -ml-1 rotate-[270deg]" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M2 38 L2 2 L38 2 M8 2 C8 18 18 28 35 28 M2 8 C18 8 28 18 28 35"/>
-            <circle cx="6" cy="6" r="2.5" fill="#dfba65"/>
-          </svg>
-        </div>
+          <!-- Ornate Brass Bottom-Left Corner Bracket -->
+          <svg class="w-10 h-10 text-gold-400 opacity-80 -mb-1 -ml-1 rotate-[270deg]" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M2 38 L2 2 L38 2 M8 2 C8 18 18 28 35 28 M2 8 C18 8 28 18 28 35"/>
+            <circle cx="6" cy="6" r="2.5" fill="#dfba65"/>
+          </svg>
+        </div>
 
-        <!-- Golden Beaded Center Pearl Seam along the inner edge -->
-        <div class="absolute right-[-7px] top-0 bottom-0 flex flex-col justify-around py-2 z-30 pointer-events-none">
-          <span class="w-3 h-3 rounded-full bg-gradient-to-tr from-[#8a6b28] via-[#dfba65] to-[#fff3cd] shadow-md border border-[#7a591e]"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#9e7d38] to-[#fdedbe] shadow"></span>
-          <span class="w-3 h-3 rounded-full bg-gradient-to-tr from-[#8a6b28] via-[#dfba65] to-[#fff3cd] shadow-md border border-[#7a591e]"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#9e7d38] to-[#fdedbe] shadow"></span>
-          <span class="w-3 h-3 rounded-full bg-gradient-to-tr from-[#8a6b28] via-[#dfba65] to-[#fff3cd] shadow-md border border-[#7a591e]"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#9e7d38] to-[#fdedbe] shadow"></span>
-          <span class="w-3 h-3 rounded-full bg-gradient-to-tr from-[#8a6b28] via-[#dfba65] to-[#fff3cd] shadow-md border border-[#7a591e]"></span>
-        </div>
+        <!-- Golden Beaded Center Pearl Seam along the inner edge -->
+        <div class="absolute right-[-7px] top-0 bottom-0 flex flex-col justify-around py-2 z-30 pointer-events-none">
+          <span class="w-3 h-3 rounded-full bg-gradient-to-tr from-[#8a6b28] via-[#dfba65] to-[#fff3cd] shadow-md border border-[#7a591e]"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#9e7d38] to-[#fdedbe] shadow"></span>
+          <span class="w-3 h-3 rounded-full bg-gradient-to-tr from-[#8a6b28] via-[#dfba65] to-[#fff3cd] shadow-md border border-[#7a591e]"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#9e7d38] to-[#fdedbe] shadow"></span>
+          <span class="w-3 h-3 rounded-full bg-gradient-to-tr from-[#8a6b28] via-[#dfba65] to-[#fff3cd] shadow-md border border-[#7a591e]"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#9e7d38] to-[#fdedbe] shadow"></span>
+          <span class="w-3 h-3 rounded-full bg-gradient-to-tr from-[#8a6b28] via-[#dfba65] to-[#fff3cd] shadow-md border border-[#7a591e]"></span>
+        </div>
 
-        <div class="text-left text-gold-300/40 text-[11px] font-sans tracking-widest pl-2 z-10">
-          अ & कौ
-        </div>
-      </div>
+        <div class="text-left text-gold-300/40 text-[11px] font-sans tracking-widest pl-2 z-10">
+          अ & कौ
+        </div>
+      </div>
 
-      <!-- Right Gate Door (Ultra Designer Moldings & Brackets) -->
-      <div id="rightDoor" class="gate-door-right absolute top-0 right-0 w-1/2 h-full sage-damask-texture border-l-2 border-[#b59247] flex flex-col justify-between p-3.5 z-20 shadow-2xl relative">
-        
-        <!-- Architectural Inset Molding Frame -->
-        <div class="door-molding-panel absolute inset-3 rounded-r-2xl border-2 border-[#b59247]/50 pointer-events-none flex flex-col justify-between p-3">
-          
-          <!-- Ornate Brass Top-Right Corner Bracket -->
-          <svg class="w-10 h-10 text-gold-400 opacity-80 -mt-1 -mr-1 ml-auto rotate-90" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M2 38 L2 2 L38 2 M8 2 C8 18 18 28 35 28 M2 8 C18 8 28 18 28 35"/>
-            <circle cx="6" cy="6" r="2.5" fill="#dfba65"/>
-          </svg>
+      <!-- Right Gate Door (Ultra Designer Moldings & Brackets) -->
+      <div id="rightDoor" class="gate-door-right absolute top-0 right-0 w-1/2 h-full sage-damask-texture border-l-2 border-[#b59247] flex flex-col justify-between p-3.5 z-20 shadow-2xl relative">
+        
+        <!-- Architectural Inset Molding Frame -->
+        <div class="door-molding-panel absolute inset-3 rounded-r-2xl border-2 border-[#b59247]/50 pointer-events-none flex flex-col justify-between p-3">
+          
+          <!-- Ornate Brass Top-Right Corner Bracket -->
+          <svg class="w-10 h-10 text-gold-400 opacity-80 -mt-1 -mr-1 ml-auto rotate-90" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M2 38 L2 2 L38 2 M8 2 C8 18 18 28 35 28 M2 8 C18 8 28 18 28 35"/>
+            <circle cx="6" cy="6" r="2.5" fill="#dfba65"/>
+          </svg>
 
-          <!-- Central Filigree Emblem Motif Watermark -->
-          <div class="my-auto mx-auto opacity-20 text-gold-300">
-            <svg class="w-20 h-28 scale-x-[-1]" viewBox="0 0 100 140" fill="currentColor">
-              <path d="M50 0 C65 25 95 30 95 55 C95 85 50 125 50 140 C50 125 5 85 5 55 C5 30 35 25 50 0 Z"/>
-              <circle cx="50" cy="55" r="14" fill="none" stroke="#fff" stroke-width="3"/>
-            </svg>
-          </div>
+          <!-- Central Filigree Emblem Motif Watermark -->
+          <div class="my-auto mx-auto opacity-20 text-gold-300">
+            <svg class="w-20 h-28 scale-x-[-1]" viewBox="0 0 100 140" fill="currentColor">
+              <path d="M50 0 C65 25 95 30 95 55 C95 85 50 125 50 140 C50 125 5 85 5 55 C5 30 35 25 50 0 Z"/>
+              <circle cx="50" cy="55" r="14" fill="none" stroke="#fff" stroke-width="3"/>
+            </svg>
+          </div>
 
-          <!-- Ornate Brass Bottom-Right Corner Bracket -->
-          <svg class="w-10 h-10 text-gold-400 opacity-80 -mb-1 -mr-1 ml-auto rotate-180" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M2 38 L2 2 L38 2 M8 2 C8 18 18 28 35 28 M2 8 C18 8 28 18 28 35"/>
-            <circle cx="6" cy="6" r="2.5" fill="#dfba65"/>
-          </svg>
-        </div>
+          <!-- Ornate Brass Bottom-Right Corner Bracket -->
+          <svg class="w-10 h-10 text-gold-400 opacity-80 -mb-1 -mr-1 ml-auto rotate-180" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M2 38 L2 2 L38 2 M8 2 C8 18 18 28 35 28 M2 8 C18 8 28 18 28 35"/>
+            <circle cx="6" cy="6" r="2.5" fill="#dfba65"/>
+          </svg>
+        </div>
 
-        <div class="text-right text-gold-300/40 text-[11px] font-sans tracking-widest pr-2 z-10">
-          २५/१२/२०२६
-        </div>
-      </div>
+        <div class="text-right text-gold-300/40 text-[11px] font-sans tracking-widest pr-2 z-10">
+          २५/१२/२०२६
+        </div>
+      </div>
 
-      <!-- Center Embossed Multi-Layer Scalloped Cartouche ("TAP TO OPEN") -->
-      <div id="cartoucheBadge" class="absolute inset-0 z-30 flex items-center justify-center pointer-events-auto">
-        <button id="tapToOpenBtn" class="halo-animated royal-cartouche px-8 py-10 rounded-[44px] text-center relative cursor-pointer active:scale-95 transition-all duration-300 select-none">
-          
-          <!-- Outer Baroque Scalloped Gold Accent Ring -->
-          <div class="absolute -inset-2.5 rounded-[48px] border border-[#d4af37]/60 pointer-events-none opacity-80"></div>
+      <!-- Center Embossed Multi-Layer Scalloped Cartouche ("TAP TO OPEN") -->
+      <div id="cartoucheBadge" class="absolute inset-0 z-30 flex items-center justify-center pointer-events-auto">
+        <button id="tapToOpenBtn" class="halo-animated royal-cartouche px-8 py-10 rounded-[44px] text-center relative cursor-pointer active:scale-95 transition-all duration-300 select-none">
+          
+          <!-- Outer Baroque Scalloped Gold Accent Ring -->
+          <div class="absolute -inset-2.5 rounded-[48px] border border-[#d4af37]/60 pointer-events-none opacity-80"></div>
 
-          <!-- Fine Engraved Double Inner Frame -->
-          <div class="absolute inset-2 rounded-[36px] border border-double border-[#b38f42] pointer-events-none"></div>
-          <div class="absolute inset-3.5 rounded-[32px] border border-dashed border-[#b38f42]/45 pointer-events-none"></div>
+          <!-- Fine Engraved Double Inner Frame -->
+          <div class="absolute inset-2 rounded-[36px] border border-double border-[#b38f42] pointer-events-none"></div>
+          <div class="absolute inset-3.5 rounded-[32px] border border-dashed border-[#b38f42]/45 pointer-events-none"></div>
 
-          <!-- Top Filigree Crown Ornament -->
-          <div class="flex justify-center mb-1.5 text-gold-600">
-            <svg class="w-8 h-8 text-[#8c6b2b]" viewBox="0 0 100 60" fill="currentColor">
-              <path d="M50 4 Q42 28 14 32 Q42 38 50 56 Q58 38 86 32 Q58 28 50 4 Z"/>
-              <circle cx="50" cy="5" r="3.5" fill="#d4af37"/>
-              <circle cx="28" cy="20" r="2" fill="#d4af37"/>
-              <circle cx="72" cy="20" r="2" fill="#d4af37"/>
-            </svg>
-          </div>
+          <!-- Top Filigree Crown Ornament -->
+          <div class="flex justify-center mb-1.5 text-gold-600">
+            <svg class="w-8 h-8 text-[#8c6b2b]" viewBox="0 0 100 60" fill="currentColor">
+              <path d="M50 4 Q42 28 14 32 Q42 38 50 56 Q58 38 86 32 Q58 28 50 4 Z"/>
+              <circle cx="50" cy="5" r="3.5" fill="#d4af37"/>
+              <circle cx="28" cy="20" r="2" fill="#d4af37"/>
+              <circle cx="72" cy="20" r="2" fill="#d4af37"/>
+            </svg>
+          </div>
 
-          <!-- Tap to Open Typography -->
-          <div class="space-y-1 relative z-10 px-2">
-            <span class="block text-[13px] tracking-[0.28em] font-sans font-bold text-[#343e2e] uppercase drop-shadow-sm">
-              TAP TO OPEN
-            </span>
-            <div class="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#b38f42] to-transparent mx-auto"></div>
-            <span class="block text-base font-rozha text-[#7a591e] font-bold tracking-wider pt-0.5">
-              ॥ निमंत्रण उघडा ॥
-            </span>
-          </div>
+          <!-- Tap to Open Typography -->
+          <div class="space-y-1 relative z-10 px-2">
+            <span class="block text-[13px] tracking-[0.28em] font-sans font-bold text-[#343e2e] uppercase drop-shadow-sm">
+              TAP TO OPEN
+            </span>
+            <div class="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#b38f42] to-transparent mx-auto"></div>
+            <span class="block text-base font-rozha text-[#7a591e] font-bold tracking-wider pt-0.5">
+              ॥ निमंत्रण उघडा ॥
+            </span>
+          </div>
 
-          <!-- Bottom Mirror Filigree Ornament -->
-          <div class="flex justify-center mt-2 text-gold-600 rotate-180">
-            <svg class="w-7 h-7 text-[#8c6b2b]" viewBox="0 0 100 60" fill="currentColor">
-              <path d="M50 4 Q42 28 14 32 Q42 38 50 56 Q58 38 86 32 Q58 28 50 4 Z"/>
-              <circle cx="50" cy="5" r="3" fill="#d4af37"/>
-            </svg>
-          </div>
+          <!-- Bottom Mirror Filigree Ornament -->
+          <div class="flex justify-center mt-2 text-gold-600 rotate-180">
+            <svg class="w-7 h-7 text-[#8c6b2b]" viewBox="0 0 100 60" fill="currentColor">
+              <path d="M50 4 Q42 28 14 32 Q42 38 50 56 Q58 38 86 32 Q58 28 50 4 Z"/>
+              <circle cx="50" cy="5" r="3" fill="#d4af37"/>
+            </svg>
+          </div>
 
-          <!-- Shimmering Pulse Ring -->
-          <div class="absolute -inset-1 rounded-[46px] border border-gold-300 animate-ping opacity-25 pointer-events-none"></div>
-        </button>
-      </div>
+          <!-- Shimmering Pulse Ring -->
+          <div class="absolute -inset-1 rounded-[46px] border border-gold-300 animate-ping opacity-25 pointer-events-none"></div>
+        </button>
+      </div>
 
-    </div>
+    </div>
 
-    <!-- ========
+    <!-- ======================================================================= -->
+    <!-- 2. DRAPED SILK CURTAINS LAYER (Video frames 00:04 - 00:07)              -->
+    <!-- ======================================================================= -->
+    <div id="curtainsOverlay" class="absolute inset-0 z-30 pointer-events-none overflow-hidden flex transition-opacity duration-500">
+      
+      <!-- Left Cream Silk Drape -->
+      <div id="curtainLeft" class="curtain-left absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-[#e7decd] via-[#f7f2e7] to-[#ede3d1] border-r border-[#c5a059]/40 shadow-2xl flex flex-col justify-between">
+        <!-- Pearl tassel cord along inner seam -->
+        <div class="absolute right-2 top-0 bottom-0 flex flex-col justify-around py-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#d4af37] shadow"></span>
+          <span class="w-2 h-2 rounded-full bg-[#f4e7c3]"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-[#d4af37]"></span>
+          <span class="w-2 h-2 rounded-full bg-[#f4e7c3]"></span>
+        </div>
+      </div>
+
+      <!-- Right Cream Silk Drape -->
+      <div id="curtainRight" class="curtain-right absolute inset-y-0 right-0 w-[55%] bg-gradient-to-l from-[#e7decd] via-[#f7f2e7] to-[#ede3d1] border-l border-[#c5a059]/40 shadow-2xl flex flex-col justify-between">
+        <div class="absolute left-2 top-0 bottom-0 flex flex-col justify-around py-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#d4af37] shadow"></span>
+          <span class="w-2 h-2 rounded-full bg-[#f4e7c3]"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-[#d4af37]"></span>
+          <span class="w-2 h-2 rounded-full bg-[#f4e7c3]"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- 3. SCROLLABLE INNER WEDDING INVITATION PAGES (Video frames 00:07 - End)  -->
+    <!-- ======================================================================= -->
+    <div id="invitationScrollBody" class="w-full h-full overflow-y-auto overflow-x-hidden linen-texture relative no-scrollbar scroll-smooth">
+      
+      <!-- Authentic Paithani Zari Gold Outer Frame & Ornamental Corner Peacocks -->
+      <div class="paithani-zari-frame">
+        <!-- Top Left Paithani Peacock Motif -->
+        <svg class="paithani-corner-peacock -top-1 -left-1 text-gold-500" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M15 15 Q40 5 60 20 Q45 45 25 35 Q10 30 15 15 Z" fill="#b38f42"/>
+          <path d="M22 24 Q55 12 70 38 Q50 62 18 40 Z" fill="#6e1c24" opacity="0.85"/>
+          <circle cx="28" cy="20" r="4" fill="#dfba65"/>
+          <circle cx="28" cy="20" r="1.5" fill="#1b2219"/>
+          <path d="M35 15 Q60 2 85 22 Q65 48 30 28 Z" fill="#dfba65" opacity="0.9"/>
+          <circle cx="50" cy="18" r="3" fill="#6e1c24"/>
+        </svg>
+
+        <!-- Top Right Paithani Peacock Motif -->
+        <svg class="paithani-corner-peacock -top-1 -right-1 scale-x-[-1] text-gold-500" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M15 15 Q40 5 60 20 Q45 45 25 35 Q10 30 15 15 Z" fill="#b38f42"/>
+          <path d="M22 24 Q55 12 70 38 Q50 62 18 40 Z" fill="#6e1c24" opacity="0.85"/>
+          <circle cx="28" cy="20" r="4" fill="#dfba65"/>
+          <circle cx="28" cy="20" r="1.5" fill="#1b2219"/>
+          <path d="M35 15 Q60 2 85 22 Q65 48 30 28 Z" fill="#dfba65" opacity="0.9"/>
+          <circle cx="50" cy="18" r="3" fill="#6e1c24"/>
+        </svg>
+
+        <!-- Bottom Left Paithani Peacock Motif -->
+        <svg class="paithani-corner-peacock -bottom-1 -left-1 scale-y-[-1] text-gold-500" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M15 15 Q40 5 60 20 Q45 45 25 35 Q10 30 15 15 Z" fill="#b38f42"/>
+          <path d="M22 24 Q55 12 70 38 Q50 62 18 40 Z" fill="#6e1c24" opacity="0.85"/>
+          <circle cx="28" cy="20" r="4" fill="#dfba65"/>
+          <circle cx="28" cy="20" r="1.5" fill="#1b2219"/>
+          <path d="M35 15 Q60 2 85 22 Q65 48 30 28 Z" fill="#dfba65" opacity="0.9"/>
+          <circle cx="50" cy="18" r="3" fill="#6e1c24"/>
+        </svg>
+
+        <!-- Bottom Right Paithani Peacock Motif -->
+        <svg class="paithani-corner-peacock -bottom-1 -right-1 scale-x-[-1] scale-y-[-1] text-gold-500" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M15 15 Q40 5 60 20 Q45 45 25 35 Q10 30 15 15 Z" fill="#b38f42"/>
+          <path d="M22 24 Q55 12 70 38 Q50 62 18 40 Z" fill="#6e1c24" opacity="0.85"/>
+          <circle cx="28" cy="20" r="4" fill="#dfba65"/>
+          <circle cx="28" cy="20" r="1.5" fill="#1b2219"/>
+          <path d="M35 15 Q60 2 85 22 Q65 48 30 28 Z" fill="#dfba65" opacity="0.9"/>
+          <circle cx="50" cy="18" r="3" fill="#6e1c24"/>
+        </svg>
+      </div>
+
+      <!-- Parallax Mogra & Golden Champa Petals Container -->
+      <div id="parallaxPetalsLayer" class="petal-layer"></div>
+
+      <!-- Permanent Side Floral Vine Borders (from screenshots) -->
+      <div class="vine-border-left"></div>
+      <div class="vine-border-right"></div>
+
+      <!-- --------------------------------------------------------------------- -->
+      <!-- SECTION 1: HERO PALACE COURTYARD & COUPLE (Video 00:08 - 00:13)       -->
+      <!-- --------------------------------------------------------------------- -->
+      <section id="heroSection" class="min-h-[100dvh] sm:min-h-[850px] relative flex flex-col justify-between items-center text-center px-8 pt-14 pb-8 z-10">
+        
+        <!-- Top Arch & Drapery SVG Graphic -->
+        <div class="w-full max-w-[340px] mx-auto opacity-95">
+          <svg viewBox="0 0 400 120" class="w-full h-auto text-sage-600" fill="none">
+            <!-- Scalloped Swag Drapery -->
+            <path d="M20 10 Q100 70 200 45 Q300 70 380 10" stroke="#7e9a75" stroke-width="2.5" fill="rgba(245,241,234,0.4)"/>
+            <path d="M10 10 Q70 95 190 60 Q310 95 390 10" stroke="#c5a059" stroke-width="1.5" stroke-dasharray="3,3"/>
+            <!-- Hanging pearl drop -->
+            <circle cx="200" cy="50" r="4" fill="#c5a059"/>
+          </svg>
+        </div>
+
+        <!-- Couple & Announcement Header -->
+        <div class="w-full max-w-[330px] mx-auto my-auto py-2">
+          
+          <!-- Small heart emblem -->
+          <div class="text-sage-700 text-sm mb-1">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <!-- Announcement Line -->
+          <p class="text-xs sm:text-sm font-sans tracking-[0.2em] uppercase text-sage-700/90 font-medium">
+            आमच्या सुकन्येच्या विवाहाचे शुभनिमंत्रण
+          </p>
+          <p class="text-[11px] font-cormorant italic text-stone-500 mb-3">
+            Wedding Invitation • Bride's Family
+          </p>
+
+          <!-- 1. BRIDE FIRST: चि. सौ. कां. अक्षदा (कन्या पक्ष) -->
+          <div class="my-2">
+            <span class="inline-block px-3 py-0.5 rounded-full bg-sage-600/10 text-sage-800 text-[10px] font-sans font-semibold uppercase tracking-wider mb-1">
+              ॥ वधू (दारिका) ॥
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-rozha text-sage-800 tracking-wide font-bold">
+              चि. सौ. कां. अक्षदा
+            </h1>
+            <p class="text-[12px] sm:text-[13px] font-marathi text-stone-600 mt-1 leading-snug">
+              कन्या: सौ. सुनिता व आयु. चंद्रकांत लक्ष्मण चव्हाण<br>
+              <span class="text-[11px] text-stone-500 font-sans">मु. पो. लांजेश्वर, ता. भूम, जि. धाराशीव</span>
+            </p>
+            <p class="text-[11px] text-stone-500 mt-0.5 font-marathi">
+              (नात: आयु. लक्ष्मण मोहन चव्हाण)
+            </p>
+          </div>
+
+          <!-- Center Ornamental '&' with heart -->
+          <div class="my-3 flex items-center justify-center gap-3">
+            <span class="h-[1px] w-12 bg-sage-400/40"></span>
+            <span class="font-script text-3xl sm:text-4xl text-[#9f7d38]">&</span>
+            <span class="h-[1px] w-12 bg-sage-400/40"></span>
+          </div>
+
+          <!-- 2. GROOM SECOND: चि. कौस्तुभ (वर) -->
+          <div class="my-2">
+            <span class="inline-block px-3 py-0.5 rounded-full bg-stone-500/10 text-stone-700 text-[10px] font-sans font-semibold uppercase tracking-wider mb-1">
+              ॥ वर (दारक) ॥
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-rozha text-sage-800 tracking-wide font-bold">
+              चि. कौस्तुभ
+            </h2>
+            <p class="text-[12px] sm:text-[13px] font-marathi text-stone-600 mt-1 leading-snug">
+              सुपुत्र: सौ. वर्षा व आयु. दयानंद धोंडिबा लोंढे<br>
+              <span class="text-[11px] text-stone-500 font-sans">मु. पो. हिंगणगाव, ता. कवठेमहांकाळ, जि. सांगली</span>
+            </p>
+            <p class="text-[11px] text-stone-500 mt-0.5 font-marathi">
+              (नातू: शहिद सुभेदार धोंडिबा श्रावण लोंढे)
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Royal Ornamental Stage Base & Scroll Indicator -->
+        <div class="w-full max-w-[320px] mx-auto mt-auto pt-4 flex flex-col items-center">
+          
+          <!-- Elegant Botanical Arch Ornament -->
+          <div class="flex items-center justify-center gap-3 text-sage-700/80 mb-2">
+            <span class="text-lg">🌿</span>
+            <span class="h-[1px] w-12 bg-sage-400/50"></span>
+            <span class="text-base">🌸</span>
+            <span class="h-[1px] w-12 bg-sage-400/50"></span>
+            <span class="text-lg">🌿</span>
+          </div>
+
+          <!-- Bottom Floating SCROLL Button Indicator -->
+          <div class="mt-2 flex flex-col items-center animate-bounce">
+            <span class="text-[10px] tracking-[0.25em] font-sans uppercase text-sage-800 font-semibold">
+              खाली स्क्रोल करा • SCROLL
+            </span>
+            <i class="fa-solid fa-chevron-down text-xs text-sage-700 mt-1"></i>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- --------------------------------------------------------------------- -->
+      <!-- SECTION 2: SCRATCH TO REVEAL (Exact match to Screenshot 3)            -->
+      <!-- --------------------------------------------------------------------- -->
+      <section class="min-h-[90vh] py-12 px-8 flex flex-col items-center justify-center text-center relative border-t border-stone-300/60">
+        
+        <!-- Opening Shloka / Blessing -->
+        <p class="text-sm font-marathi text-stone-700 leading-relaxed max-w-[280px] mx-auto italic mb-4">
+          "विश्वासाच्या आणि प्रेमाच्या या पवित्र बंधनात, आपण उपस्थित राहून नवदाम्पत्यास शुभाशीर्वाद द्यावेत ही नम्र विनंती."
+        </p>
+
+        <!-- Divider with heart -->
+        <div class="flex items-center justify-center gap-3 w-40 mx-auto my-3">
+          <span class="h-[1px] w-full bg-sage-400/50"></span>
+          <i class="fa-solid fa-heart text-xs text-sage-700"></i>
+          <span class="h-[1px] w-full bg-sage-400/50"></span>
+        </div>
+
+        <!-- Section Title (Cursive / Serif match) -->
+        <h3 class="font-script text-4xl sm:text-5xl text-sage-800 my-1">
+          Scratch to Reveal
+        </h3>
+        <p class="text-xs font-sans uppercase tracking-widest text-stone-500 mb-6">
+          लग्न मुहूर्त जाणून घेण्यासाठी स्क्रॅच करा
+        </p>
+
+        <!-- Interactive Scratch-Off Heart Card -->
+        <div class="relative w-64 h-64 mx-auto flex items-center justify-center select-none">
+          
+          <!-- Underneath Hidden Card (Revealed upon scratching) -->
+          <div class="absolute inset-0 rounded-full flex flex-col items-center justify-center p-6 bg-gradient-to-tr from-[#faf6ee] via-white to-[#f5eee1] border-2 border-dashed border-[#c5a059] shadow-inner text-center z-0">
+            <span class="text-2xl">🔔💍</span>
+            <span class="text-xs font-sans uppercase tracking-wider text-sage-700 font-semibold mt-1">
+              शुभविवाह तारीख
+            </span>
+            <h4 class="text-2xl font-rozha text-sage-800 font-bold my-0.5">
+              २५ डिसेंबर २०२६
+            </h4>
+            <p class="text-xs font-marathi text-stone-600 font-medium">
+              वार: शुक्रवार | वेळ: दु. १२:३० वा.
+            </p>
+            <span class="text-[10px] text-amber-700 font-sans mt-1">
+              गावदेवी समाज मंदिर हॉल, जुईनगर
+            </span>
+          </div>
+
+          <!-- Top Canvas Scratch Surface (Glitter Sage Green Heart) -->
+          <canvas id="scratchCanvas" width="256" height="256" class="relative z-10 drop-shadow-md touch-none"></canvas>
+
+        </div>
+
+        <p class="text-[11px] font-sans text-stone-500 mt-4 flex items-center gap-1.5 justify-center">
+          <i class="fa-solid fa-hand-pointer text-sage-700"></i> बोटाने किंवा माऊसने हृदयावर स्क्रॅच करा
+        </p>
+
+        <!-- Save the Date Action Button (Add to Google Calendar) -->
+        <div class="mt-6">
+          <a id="saveTheDateBtn" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-sage-700 hover:bg-sage-800 text-stone-100 font-sans text-xs tracking-wider uppercase font-semibold shadow-md active:scale-95 transition-all">
+            <i class="fa-regular fa-calendar-plus text-sm"></i>
+            <span>SAVE THE DATE • कॅलेंडरमध्ये नोंदवा</span>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- --------------------------------------------------------------------- -->
+      <!-- SECTION 3: COUNTING DOWN TO FOREVER (Screenshot 4)                    -->
+      <!-- --------------------------------------------------------------------- -->
+      <section class="min-h-[70vh] py-12 px-8 flex flex-col items-center justify-center text-center relative border-t border-stone-300/60">
+        
+        <h3 class="font-script text-4xl sm:text-5xl text-sage-800 my-1">
+          Counting Down to Forever
+        </h3>
+        <p class="text-xs font-sans uppercase tracking-widest text-stone-500 mb-6">
+          लग्नघडी समीप
+        </p>
+
+        <!-- Divider with heart -->
+        <div class="flex items-center justify-center gap-3 w-32 mx-auto mb-6">
+          <span class="h-[1px] w-full bg-sage-400/50"></span>
+          <i class="fa-solid fa-heart text-[10px] text-sage-700"></i>
+          <span class="h-[1px] w-full bg-sage-400/50"></span>
+        </div>
+
+        <!-- 4 Rounded Sage Counter Boxes (Screenshot 4) -->
+        <div class="grid grid-cols-4 gap-2 sm:gap-3 w-full max-w-xs mx-auto mb-6">
+          <!-- Days -->
+          <div class="p-3 sm:p-4 rounded-2xl bg-[#dad3c4]/80 border border-[#b8ae9c] shadow-sm flex flex-col items-center">
+            <span id="countdownDays" class="text-2xl sm:text-3xl font-cormorant font-bold text-sage-900 leading-none">00</span>
+            <span class="text-[9px] font-sans uppercase tracking-wider text-stone-600 mt-1">DAYS / दिवस</span>
+          </div>
+          <!-- Hours -->
+          <div class="p-3 sm:p-4 rounded-2xl bg-[#dad3c4]/80 border border-[#b8ae9c] shadow-sm flex flex-col items-center">
+            <span id="countdownHours" class="text-2xl sm:text-3xl font-cormorant font-bold text-sage-900 leading-none">00</span>
+            <span class="text-[9px] font-sans uppercase tracking-wider text-stone-600 mt-1">HOURS / तास</span>
+          </div>
+          <!-- Minutes -->
+          <div class="p-3 sm:p-4 rounded-2xl bg-[#dad3c4]/80 border border-[#b8ae9c] shadow-sm flex flex-col items-center">
+            <span id="countdownMins" class="text-2xl sm:text-3xl font-cormorant font-bold text-sage-900 leading-none">00</span>
+            <span class="text-[9px] font-sans uppercase tracking-wider text-stone-600 mt-1">MINUTES</span>
+          </div>
+          <!-- Seconds -->
+          <div class="p-3 sm:p-4 rounded-2xl bg-[#dad3c4]/80 border border-[#b8ae9c] shadow-sm flex flex-col items-center">
+            <span id="countdownSecs" class="text-2xl sm:text-3xl font-cormorant font-bold text-sage-900 leading-none">00</span>
+            <span class="text-[9px] font-sans uppercase tracking-wider text-stone-600 mt-1">SECONDS</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- --------------------------------------------------------------------- -->
+      <!-- SECTION 4: PROGRAM TIMELINE (Exact match to Screenshots 4 & 5)        -->
+      <!-- --------------------------------------------------------------------- -->
+      <section class="py-12 px-8 flex flex-col items-center relative border-t border-stone-300/60">
+        
+        <!-- Clock Icon Header -->
+        <div class="w-10 h-10 rounded-full border border-sage-600 text-sage-700 flex items-center justify-center mb-2">
+          <i class="fa-regular fa-clock text-base"></i>
+        </div>
+
+        <h3 class="font-script text-4xl sm:text-5xl text-sage-800 my-1 text-center">
+          Program Timeline
+        </h3>
+        <p class="text-xs font-sans uppercase tracking-widest text-stone-500 mb-6 text-center">
+          विवाह सोहळा कार्यक्रम
+        </p>
+
+        <!-- Date Banner -->
+        <div class="w-full max-w-xs border-b border-stone-400/60 pb-2 mb-6 text-center">
+          <span class="text-xs sm:text-sm font-sans uppercase tracking-widest text-sage-900 font-bold">
+            FRIDAY, DEC 25, 2026
+          </span>
+          <span class="block text-xs font-marathi text-stone-600">शुक्रवार दि. २५/१२/२०२६</span>
+        </div>
+
+        <!-- Vertical Schedule Items with Divider Lines -->
+        <div class="w-full max-w-xs space-y-6">
+          
+          <!-- Event 1: Sakshagandh -->
+          <div class="flex items-start">
+            <div class="w-24 text-right pr-4 font-sans">
+              <span class="block text-xs font-bold text-sage-900">11:30 AM</span>
+              <span class="text-[10px] text-stone-500">सकाळी</span>
+            </div>
+            <div class="border-l-2 border-sage-400 pl-4 flex-1">
+              <h4 class="text-sm sm:text-base font-bold font-rozha text-sage-900">साक्षगंध (Engagement)</h4>
+              <p class="text-xs text-stone-600 font-cormorant italic">We welcome your arrival with love..</p>
+            </div>
+          </div>
+
+          <!-- Event 2: Mangal Parinay -->
+          <div class="flex items-start">
+            <div class="w-24 text-right pr-4 font-sans">
+              <span class="block text-xs font-bold text-sage-900">12:30 PM</span>
+              <span class="text-[10px] text-stone-500">दुपारी</span>
+            </div>
+            <div class="border-l-2 border-sage-700 pl-4 flex-1">
+              <h4 class="text-sm sm:text-base font-bold font-rozha text-sage-900">मंगल परिणय (Wedding Ceremony)</h4>
+              <p class="text-xs text-stone-600">बौद्धाचार्य: आयु. भगिरथ शिंदे</p>
+              <p class="text-xs text-stone-500 font-cormorant italic mt-0.5">Your blessings mean the world to us!</p>
+            </div>
+          </div>
+
+          <!-- Event 3: Reception & Lunch -->
+          <div class="flex items-start">
+            <div class="w-24 text-right pr-4 font-sans">
+              <span class="block text-xs font-bold text-sage-900">1:00 PM</span>
+              <span class="text-[10px] text-stone-500">ते ४:०० PM</span>
+            </div>
+            <div class="border-l-2 border-sage-400 pl-4 flex-1">
+              <h4 class="text-sm sm:text-base font-bold font-rozha text-sage-900">स्वागत समारंभ व स्नेह भोजन</h4>
+              <p class="text-xs text-stone-600 font-cormorant italic">Wedding Lunch & Celebrations</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- --------------------------------------------------------------------- -->
+      <!-- SECTION 5: PRE-WEDDING EVENTS (Screenshot 6)                          -->
+      <!-- --------------------------------------------------------------------- -->
+      <section class="py-12 px-8 flex flex-col items-center relative border-t border-stone-300/60">
+        
+        <!-- Party Horn Icon -->
+        <div class="text-2xl text-sage-700 mb-2">
+          🎉
+        </div>
+
+        <h3 class="font-script text-4xl sm:text-5xl text-sage-800 my-1 text-center">
+          Pre-Wedding Events
+        </h3>
+        <p class="text-xs font-sans uppercase tracking-widest text-stone-500 mb-6 text-center">
+          पूर्वरंग सोहळा
+        </p>
+
+        <!-- Divider with heart -->
+        <div class="flex items-center justify-center gap-3 w-32 mx-auto mb-6">
+          <span class="h-[1px] w-full bg-sage-400/50"></span>
+          <i class="fa-solid fa-heart text-[10px] text-sage-700"></i>
+          <span class="h-[1px] w-full bg-sage-400/50"></span>
+        </div>
+
+        <!-- Date Banner -->
+        <div class="w-full max-w-xs border-b border-stone-400/60 pb-2 mb-6 text-center">
+          <span class="text-xs sm:text-sm font-sans uppercase tracking-widest text-sage-900 font-bold">
+            WEDNESDAY, DEC 23, 2026
+          </span>
+          <span class="block text-xs font-marathi text-stone-600">बुधवार दि. २३/१२/२०२६</span>
+        </div>
+
+        <!-- Pre-Wedding Events list -->
+        <div class="w-full max-w-xs space-y-6">
+          
+          <!-- Haldi / Sugandhi Utane -->
+          <div class="flex items-start">
+            <div class="w-24 text-right pr-4 font-sans">
+              <span class="block text-xs font-bold text-sage-900">6:00 PM</span>
+              <span class="text-[10px] text-stone-500">सायंकाळी</span>
+            </div>
+            <div class="border-l-2 border-sage-600 pl-4 flex-1">
+              <h4 class="text-sm sm:text-base font-bold font-rozha text-sage-900">सुगंधी उटणे व हळद समारंभ</h4>
+              <p class="text-xs text-stone-600 mt-0.5">At Bride's House (दारिकेच्या निवासस्थानी)</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- --------------------------------------------------------------------- -->
+      <!-- SECTION 6: VENUE (Screenshot 5)                                       -->
+      <!-- --------------------------------------------------------------------- -->
+      <section class="py-12 px-8 flex flex-col items-center text-center relative border-t border-stone-300/60">
+        
+        <!-- Map Pin Icon -->
+        <div class="w-10 h-10 rounded-full border border-sage-600 text-sage-700 flex items-center justify-center mb-2">
+          <i class="fa-solid fa-location-dot text-base"></i>
+        </div>
+
+        <h3 class="font-script text-4xl sm:text-5xl text-sage-800 my-1">
+          Venue
+        </h3>
+        <p class="text-xs font-sans uppercase tracking-widest text-stone-500 mb-6">
+          विवाह सोहळा स्थळ
+        </p>
+
+        <!-- Divider with heart -->
+        <div class="flex items-center justify-center gap-3 w-32 mx-auto mb-6">
+          <span class="h-[1px] w-full bg-sage-400/50"></span>
+          <i class="fa-solid fa-heart text-[10px] text-sage-700"></i>
+          <span class="h-[1px] w-full bg-sage-400/50"></span>
+        </div>
+
+        <!-- Venue Details -->
+        <div class="my-2">
+          <h4 class="text-xl sm:text-2xl font-bold font-rozha text-sage-900">
+            गावदेवी समाज मंदिर हॉल
+          </h4>
+          <p class="text-xs sm:text-sm font-sans text-stone-600 mt-2 leading-relaxed">
+            जुईपाडा, सेक्टर २३, जुईनगर (पश्चिम),<br>
+            नवी मुंबई, महाराष्ट्र.
+          </p>
+        </div>
+
+        <!-- Open in Google Maps Link Button (Screenshot 5 button style) -->
+        <div class="mt-6">
+          <a href="https://www.google.com/maps/search/?api=1&query=Gavdevi+Samaj+Mandir+Hall+Sector+23+Juinagar+Navi+Mumbai" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-sage-700 bg-white/90 text-sage-800 text-xs font-sans font-semibold shadow hover:bg-sage-100 transition active:scale-95">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-sage-600"></i>
+            <span>Open in Google Maps / मार्ग पहा</span>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- --------------------------------------------------------------------- -->
+      <!-- SECTION 7: BRIDE'S RESIDENCE & RSVP CONTACT (Strictly Bride Side)     -->
+      <!-- --------------------------------------------------------------------- -->
+      <section class="py-12 px-8 flex flex-col items-center text-center relative border-t border-stone-300/60 pb-20">
+        
+        <!-- Home Icon -->
+        <div class="w-10 h-10 rounded-full border border-sage-600 text-sage-700 flex items-center justify-center mb-2">
+          <i class="fa-solid fa-house-chimney text-base"></i>
+        </div>
+
+        <h3 class="font-script text-4xl sm:text-5xl text-sage-800 my-1">
+          Bride's Residence
+        </h3>
+        <p class="text-xs font-sans uppercase tracking-widest text-stone-500 mb-6">
+          दारिकेचा पत्ता व संपर्क
+        </p>
+
+        <!-- Exact Bride Side Address Provided -->
+        <div class="p-4 rounded-2xl bg-white/70 border border-stone-300 max-w-xs mx-auto text-left shadow-sm mb-6">
+          <span class="block text-[11px] font-sans uppercase tracking-wider text-sage-800 font-bold mb-1">
+            निवासस्थान पत्ता:
+          </span>
+          <p class="text-xs font-sans text-stone-700 leading-relaxed font-medium">
+            E1/06, पंचगंगा सोसायटी, BEST स्टाफ क्वार्टर्स,<br>
+            अनिल दत्तात्रय उभारे मार्ग, घाटकोपर BEST डेपो समोर,<br>
+            घाटकोपर (पूर्व), मुंबई - ४०००७५
+          </p>
+        </div>
+
+        <!-- Host Names -->
+        <div class="mb-6">
+          <span class="text-[11px] font-sans uppercase tracking-wider text-stone-500">आपले स्नेहांकित (निमंत्रक):</span>
+          <h5 class="text-base font-bold font-rozha text-sage-900 mt-1">
+            आयु. चंद्रकांत लक्ष्मण चव्हाण व सौ. सुनिता चंद्रकांत चव्हाण
+          </h5>
+          <p class="text-xs font-marathi text-stone-600 mt-0.5">समस्त चव्हाण परिवार</p>
+        </div>
+
+        <!-- Contact Cards with Direct Call & WhatsApp Buttons -->
+        <div class="w-full max-w-xs space-y-3 mb-6">
+          
+          <!-- Contact 1: 8767721499 -->
+          <div class="p-3 rounded-2xl bg-white/80 border border-stone-300 flex items-center justify-between shadow-sm">
+            <div class="text-left font-sans">
+              <span class="block text-[10px] text-stone-500">संपर्क क्रमांक १</span>
+              <span class="text-xs font-bold text-sage-900">8767721499</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="tel:8767721499" class="w-8 h-8 rounded-full bg-sage-700 text-white flex items-center justify-center hover:bg-sage-800 transition" title="Call">
+                <i class="fa-solid fa-phone text-xs"></i>
+              </a>
+              <a href="https://wa.me/918767721499?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0!%20%E0%A4%85%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A6%E0%A4%BE%20%E0%A4%B5%20%E0%A4%95%E0%A5%8C%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%81%E0%A4%AD%20%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%9A%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B6%E0%A5%81%E0%A4%AD%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B9%20%E0%A4%A8%E0%A4%BF%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%A3%E0%A4%BE%E0%A4%AC%E0%A4%A6%E0%A5%8D%E0%A4%A6%E0%A4%B2..." target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-500 transition" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact 2: 8898837550 -->
+          <div class="p-3 rounded-2xl bg-white/80 border border-stone-300 flex items-center justify-between shadow-sm">
+            <div class="text-left font-sans">
+              <span class="block text-[10px] text-stone-500">संपर्क क्रमांक २</span>
+              <span class="text-xs font-bold text-sage-900">8898837550</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="tel:8898837550" class="w-8 h-8 rounded-full bg-sage-700 text-white flex items-center justify-center hover:bg-sage-800 transition" title="Call">
+                <i class="fa-solid fa-phone text-xs"></i>
+              </a>
+              <a href="https://wa.me/918898837550?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0!%20%E0%A4%85%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A6%E0%A4%BE%20%E0%A4%B5%20%E0%A4%95%E0%A5%8C%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%81%E0%A4%AD%20%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%9A%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B6%E0%A5%81%E0%A4%AD%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B9%20%E0%A4%A8%E0%A4%BF%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%A3%E0%A4%BE%E0%A4%AC%E0%A4%A6%E0%A5%8D%E0%A4%A6%E0%A4%B2..." target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-500 transition" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Blessing -->
+        <p class="text-[11px] font-marathi text-stone-500 italic max-w-xs mx-auto">
+          "ऋणानुबंधाच्या जिथून पडल्या गाठी, तिथे भेटीस यावे आपण स्नेहासाठी."
+        </p>
+
+      </section>
+
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- FLOATING BOTTOM BAR (Exact match to Zareqia bottom navigation pill)    -->
+    <!-- ======================================================================= -->
+    <footer class="absolute bottom-3 left-4 right-4 z-40 flex items-center justify-between pointer-events-auto">
+      
+      <!-- Language Selector / Toggle Pill -->
+      <button id="langToggleBtn" class="px-4 py-2 rounded-full bg-white/90 backdrop-blur-md border border-stone-300 text-sage-900 text-xs font-sans font-medium shadow-md flex items-center gap-1.5 active:scale-95 transition">
+        <i class="fa-solid fa-globe text-xs text-sage-700"></i>
+        <span id="langLabel">English</span>
+      </button>
+
+      <!-- Share Invitation Pill -->
+      <button id="shareInviteBtn" class="px-5 py-2 rounded-full bg-[#c5a059] hover:bg-[#b59048] text-[#2c2211] text-xs font-sans font-bold shadow-lg flex items-center gap-1.5 active:scale-95 transition">
+        <i class="fa-solid fa-share-nodes text-xs"></i>
+        <span>Share Invite</span>
+      </button>
+
+    </footer>
+
+    <!-- Copy Toast Notification -->
+    <div id="copyToast" class="absolute bottom-16 left-1/2 -translate-x-1/2 z-50 hidden px-4 py-1.5 rounded-full bg-sage-800 text-stone-100 font-sans text-xs shadow-xl flex items-center gap-2">
+      <i class="fa-solid fa-circle-check text-emerald-400"></i>
+      <span>निमंत्रण लिंक कॉपी झाली आहे!</span>
+    </div>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: 3D GATEFOLD, CURTAIN REVEAL, SCRATCH CARD & SOUND             -->
+  <!-- ========================================================================= -->
+  <script>
+    // -------------------------------------------------------------------------
+    // 1. Zareqia Sequence: Tap to Open -> Gatefold Doors -> Draped Curtains
+    // -------------------------------------------------------------------------
+    const tapToOpenBtn = document.getElementById('tapToOpenBtn');
+    const gatefoldOverlay = document.getElementById('gatefoldOverlay');
+    const curtainsOverlay = document.getElementById('curtainsOverlay');
+    const scrollBody = document.getElementById('invitationScrollBody');
+
+    tapToOpenBtn.addEventListener('click', () => {
+      // Start Auspicious Melodic Synthesizer
+      startSynthesizerMelody();
+
+      // Confetti burst on opening
+      launchFestiveConfetti();
+
+      // 1. Open Gatefold Doors
+      gatefoldOverlay.classList.add('doors-open');
+      const badge = document.getElementById('cartoucheBadge');
+      badge.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      badge.style.opacity = '0';
+      badge.style.transform = 'scale(0.85)';
+      badge.style.pointerEvents = 'none';
+
+      // 2. Open Curtains after doors begin swinging
+      setTimeout(() => {
+        curtainsOverlay.classList.add('curtains-open');
+      }, 350);
+
+      // 3. Fade out gate overlay
+      setTimeout(() => {
+        gatefoldOverlay.style.opacity = '0';
+        gatefoldOverlay.style.pointerEvents = 'none';
+      }, 1400);
+
+      // 4. Clean up curtains overlay & ensure ultra-smooth scroll positioning
+      setTimeout(() => {
+        curtainsOverlay.style.display = 'none';
+        gatefoldOverlay.style.display = 'none';
+        // Gentle smooth settling scroll to hero
+        scrollBody.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 1900);
+    });
+
+    // -------------------------------------------------------------------------
+    // 2. Interactive Scratch-Off Heart Card (Strict 50% Scratch Threshold)
+    // -------------------------------------------------------------------------
+    const canvas = document.getElementById('scratchCanvas');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let isDissolved = false;
+    let scratchCheckThrottle = null;
+    let strokeCount = 0; // Ensures user actually dragged / swiped
+
+    // Helper to draw a heart path
+    function drawHeartPath(c, x, y, width, height) {
+      c.beginPath();
+      const topCurveHeight = height * 0.3;
+      c.moveTo(x + width / 2, y + height);
+      // Left curve
+      c.bezierCurveTo(
+        x, y + (height + topCurveHeight) / 2,
+        x, y + topCurveHeight / 2,
+        x + width / 4, y + topCurveHeight / 2
+      );
+      c.bezierCurveTo(
+        x + width / 2, y + topCurveHeight / 2,
+        x + width / 2, y,
+        x + width / 2, y + topCurveHeight
+      );
+      // Right curve
+      c.bezierCurveTo(
+        x + width / 2, y,
+        x + width / 2, y + topCurveHeight / 2,
+        x + (width * 3) / 4, y + topCurveHeight / 2
+      );
+      c.bezierCurveTo(
+        x + width, y + topCurveHeight / 2,
+        x + width, y + (height + topCurveHeight) / 2,
+        x + width / 2, y + height
+      );
+      c.closePath();
+    }
+
+    // Initialize the Scratch Layer with Glitter Sage Heart
+    function initScratchCard() {
+      ctx.save();
+      // Clip canvas into a Heart
+      drawHeartPath(ctx, 16, 20, 224, 210);
+      ctx.clip();
+
+      // Sage-green metallic gradient base
+      const grad = ctx.createLinearGradient(0, 0, 256, 256);
+      grad.addColorStop(0, '#53644d');
+      grad.addColorStop(0.5, '#788e6e');
+      grad.addColorStop(1, '#3e4c38');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 256, 256);
+
+      // Glitter effect sparkles
+      for (let i = 0; i < 480; i++) {
+        ctx.fillStyle = Math.random() > 0.4 ? 'rgba(255, 255, 255, 0.75)' : 'rgba(224, 186, 75, 0.8)';
+        ctx.beginPath();
+        ctx.arc(Math.random() * 256, Math.random() * 256, Math.random() * 1.6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Center prompt text
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 15px Montserrat, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('SCRATCH HERE', 128, 124);
+      ctx.font = '12px "Tiro Devanagari Marathi", serif';
+      ctx.fillText('येथे स्क्रॅच करा ✨', 128, 146);
+
+      ctx.restore();
+    }
+    initScratchCard();
+
+    // Check scratch percentage - requires at least 48% scratched AND genuine movement
+    function checkScratchPercentage() {
+      if (isDissolved || strokeCount < 18) return;
+      
+      const imgData = ctx.getImageData(30, 30, 196, 196);
+      const pixels = imgData.data;
+      let transparentCount = 0;
+      let totalSampled = 0;
+
+      // Sample pixels across heart center
+      for (let i = 3; i < pixels.length; i += 16) {
+        totalSampled++;
+        if (pixels[i] < 20) {
+          transparentCount++;
+        }
+      }
+
+      const percent = (transparentCount / totalSampled) * 100;
+
+      // Strictly dissolve only after user has scratched away 48% to 50% of the surface
+      if (percent >= 48) {
+        dissolveScratchCard();
+      }
+    }
+
+    // Gracefully dissolve remaining scratch layer and launch confetti celebration
+    function dissolveScratchCard() {
+      if (isDissolved) return;
+      isDissolved = true;
+
+      // Add CSS dissolve class for smooth fade & blur expansion
+      canvas.classList.add('canvas-dissolving');
+
+      // Auspicious Rose & Golden Confetti Burst
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 85,
+          spread: 80,
+          origin: { y: 0.55 },
+          colors: ['#c5a059', '#7e9a75', '#f7f4ed', '#eec7b9', '#dfba65']
+        });
+      }
+
+      // Remove canvas from DOM interaction after transition
+      setTimeout(() => {
+        canvas.style.display = 'none';
+      }, 1200);
+    }
+
+    function applyErase(clientX, clientY) {
+      if (isDissolved) return;
+      const rect = canvas.getBoundingClientRect();
+      const x = (clientX - rect.left) * (canvas.width / rect.width);
+      const y = (clientY - rect.top) * (canvas.height / rect.height);
+
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      // Realistic scratch brush radius
+      ctx.arc(x, y, 18, 0, Math.PI * 2);
+      ctx.fill();
+
+      strokeCount++;
+
+      // Throttle percentage checking
+      if (!scratchCheckThrottle) {
+        scratchCheckThrottle = setTimeout(() => {
+          checkScratchPercentage();
+          scratchCheckThrottle = null;
+        }, 150);
+      }
+    }
+
+    // Mouse Listeners: No auto-reveal on click; requires deliberate dragging
+    canvas.addEventListener('mousedown', (e) => {
+      isDrawing = true;
+      applyErase(e.clientX, e.clientY);
+    });
+    canvas.addEventListener('mousemove', (e) => {
+      if (!isDrawing) return;
+      applyErase(e.clientX, e.clientY);
+    });
+    window.addEventListener('mouseup', () => { isDrawing = false; });
+
+    // Touch Listeners: Requires active scratching/swiping gesture
+    canvas.addEventListener('touchstart', (e) => {
+      isDrawing = true;
+      if (e.touches && e.touches[0]) {
+        applyErase(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    canvas.addEventListener('touchmove', (e) => {
+      if (!isDrawing) return;
+      if (e.touches && e.touches[0]) {
+        applyErase(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => { isDrawing = false; });
+
+    // -------------------------------------------------------------------------
+    // 3. Real-Time Wedding Countdown (25 Dec 2026, 12:30 PM IST)
+    // -------------------------------------------------------------------------
+    const weddingDate = new Date('2026-12-25T12:30:00+05:30').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance > 0) {
+        const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('countdownDays').innerText = String(d).padStart(2, '0');
+        document.getElementById('countdownHours').innerText = String(h).padStart(2, '0');
+        document.getElementById('countdownMins').innerText = String(m).padStart(2, '0');
+        document.getElementById('countdownSecs').innerText = String(s).padStart(2, '0');
+      } else {
+        document.getElementById('countdownDays').innerText = '00';
+        document.getElementById('countdownHours').innerText = '00';
+        document.getElementById('countdownMins').innerText = '00';
+        document.getElementById('countdownSecs').innerText = '00';
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Add to Google Calendar Link
+    const saveDateBtn = document.getElementById('saveTheDateBtn');
+    const calTitle = encodeURIComponent("चि. सौ. कां. अक्षदा व चि. कौस्तुभ - शुभविवाह");
+    const calDesc = encodeURIComponent("अक्षदा व कौस्तुभ यांचा शुभविवाह सोहळा. स्थळ: गावदेवी समाज मंदिर हॉल, जुईपाडा, सेक्टर २३, जुईनगर (प.), नवी मुंबई.");
+    const calLoc = encodeURIComponent("गावदेवी समाज मंदिर हॉल, जुईपाडा, सेक्टर २३, जुईनगर (प.), नवी मुंबई");
+    // Friday 25 Dec 2026, 11:30 AM to 4:00 PM IST (06:00 UTC to 10:30 UTC)
+    saveDateBtn.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&dates=20261225T060000Z/20261225T103000Z&details=${calDesc}&location=${calLoc}`;
+
+    // -------------------------------------------------------------------------
+    // 4. Web Audio API Soothing Melodic Synthesizer (Raag Bhupali Harmony)
+    // -------------------------------------------------------------------------
+    let audioCtx = null;
+    let isPlaying = false;
+    let melodyTimer = null;
+    const audioBtn = document.getElementById('audioToggleBtn');
+    const audioIcon = document.getElementById('audioIcon');
+
+    const bhupaliPitches = [261.63, 293.66, 329.63, 392.0, 440.0, 523.25, 587.33];
+    const melodyPattern = [0, 1, 2, 3, 4, 3, 2, 1, 2, 3, 5, 4, 3, 2, 0, 1];
+    let noteStep = 0;
+
+    function playNote(freq, dur = 0.5) {
+      if (!audioCtx) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        // Warm, traditional bansuri / sitar harmonic overtone
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+        gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.12, audioCtx.currentTime + 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + dur);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function startSynthesizerMelody() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      isPlaying = true;
+      audioIcon.className = "fa-solid fa-volume-high text-stone-100";
+
+      if (melodyTimer) clearInterval(melodyTimer);
+      melodyTimer = setInterval(() => {
+        const f = bhupaliPitches[melodyPattern[noteStep % melodyPattern.length]];
+        playNote(f, 0.45);
+        noteStep++;
+      }, 450);
+    }
+
+    function stopSynthesizerMelody() {
+      isPlaying = false;
+      audioIcon.className = "fa-solid fa-volume-xmark text-stone-400";
+      if (melodyTimer) clearInterval(melodyTimer);
+    }
+
+    audioBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        stopSynthesizerMelody();
+      } else {
+        startSynthesizerMelody();
+      }
+    });
+
+    // -------------------------------------------------------------------------
+    // 5. Flower Shower / Confetti
+    // -------------------------------------------------------------------------
+    function launchFestiveConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 75,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#c5a059', '#7e9a75', '#f7f4ed', '#eec7b9']
+        });
+      }
+    }
+    document.getElementById('blessingPetalBtn').addEventListener('click', launchFestiveConfetti);
+
+    // -------------------------------------------------------------------------
+    // 6. Share & Language Toggle Controls
+    // -------------------------------------------------------------------------
+    const shareBtn = document.getElementById('shareInviteBtn');
+    const toast = document.getElementById('copyToast');
+
+    shareBtn.addEventListener('click', () => {
+      const inviteUrl = window.location.href;
+      if (navigator.share) {
+        navigator.share({
+          title: 'शुभविवाह निमंत्रण | अक्षदा आणि कौस्तुभ',
+          text: 'चि. सौ. कां. अक्षदा आणि चि. कौस्तुभ यांच्या शुभविवाहाचे सप्रेम डिजिटल निमंत्रण:',
+          url: inviteUrl
+        }).catch(() => {});
+      } else {
+        const temp = document.createElement('input');
+        temp.value = inviteUrl;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 3500);
+      }
+    });
+
+    // Language Toggle (Demo switcher indicator)
+    let isMarathi = true;
+    const langBtn = document.getElementById('langToggleBtn');
+    const langLabel = document.getElementById('langLabel');
+
+    langBtn.addEventListener('click', () => {
+      isMarathi = !isMarathi;
+      langLabel.innerText = isMarathi ? 'English' : 'मराठी';
+    });
+
+    // -------------------------------------------------------------------------
+    // 7. Parallax Floating Mogra & Golden Champa Petals Generator
+    // -------------------------------------------------------------------------
+    const petalsContainer = document.getElementById('parallaxPetalsLayer');
+    const petalSVGCollection = [
+      // Soft White Mogra (Jasmine) Petal
+      `<svg viewBox="0 0 30 30" width="18" height="18" fill="none"><path d="M15 2 C22 10 26 18 15 28 C4 18 8 10 15 2 Z" fill="#ffffff" stroke="#e8dfce" stroke-width="0.8"/><circle cx="15" cy="18" r="2.5" fill="#fdf4c7" opacity="0.8"/></svg>`,
+      // Cream Mogra Petal
+      `<svg viewBox="0 0 30 30" width="16" height="16" fill="none"><path d="M15 3 C20 12 24 19 15 27 C6 19 10 12 15 3 Z" fill="#fcf9ee" stroke="#ded4c0" stroke-width="0.8"/><circle cx="15" cy="19" r="2" fill="#edd685" opacity="0.7"/></svg>`,
+      // Golden Champa (Sonchafa) Petal
+      `<svg viewBox="0 0 30 35" width="16" height="21" fill="none"><path d="M15 2 C23 11 25 24 15 33 C5 24 7 11 15 2 Z" fill="#f9d77e" stroke="#d4af37" stroke-width="0.7"/><path d="M15 7 L15 27" stroke="#e6b743" stroke-width="0.8" opacity="0.6"/></svg>`,
+      // Rose Pink Accent Petal
+      `<svg viewBox="0 0 30 30" width="15" height="15" fill="none"><path d="M15 3 C22 11 25 19 15 27 C5 19 8 11 15 3 Z" fill="#f7d0c8" stroke="#e8a89b" stroke-width="0.8"/><circle cx="15" cy="17" r="2" fill="#ea8f7e" opacity="0.5"/></svg>`
+    ];
+
+    function spawnParallaxPetals() {
+      if (!petalsContainer) return;
+      petalsContainer.innerHTML = '';
+      const totalPetals = 16;
+
+      for (let i = 0; i < totalPetals; i++) {
+        const petalWrap = document.createElement('div');
+        petalWrap.className = 'drifting-petal';
+        petalWrap.innerHTML = petalSVGCollection[i % petalSVGCollection.length];
+
+        // Random horizontal layout and timing for natural floating
+        const startLeft = Math.random() * 88 + 4; // Between 4% and 92%
+        const animDuration = Math.random() * 7 + 7; // 7s to 14s
+        const animDelay = Math.random() * 8; // 0s to 8s
+        const scaleVal = Math.random() * 0.4 + 0.8;
+
+        petalWrap.style.left = `${startLeft}%`;
+        petalWrap.style.animationDuration = `${animDuration}s`;
+        petalWrap.style.animationDelay = `-${animDelay}s`;
+        petalWrap.style.transform = `scale(${scaleVal})`;
+
+        petalsContainer.appendChild(petalWrap);
+      }
+    }
+    spawnParallaxPetals();
+
+    // Parallax Response: Petals shift gently as the user scrolls
+    if (scrollBody) {
+      scrollBody.addEventListener('scroll', () => {
+        const scrollY = scrollBody.scrollTop;
+        if (petalsContainer) {
+          petalsContainer.style.transform = `translateY(${scrollY * 0.18}px)`;
+        }
+      }, { passive: true });
+    }
+  </script>
+</body>
+</html>
